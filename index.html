@@ -1,80 +1,86 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-	<meta charset="UTF-8">
-	<title>年管加，自助专利管理和专利年费缴纳云平台！</title>
-	<meta name="keywords" content="年管加，自助专利管理和专利年费缴纳云平台！" />
-	<meta name="description" content="年管加，自助专利管理和专利年费缴纳云平台！" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	<meta name="format-detection" content="telephone=no" />
-	<meta name="full-screen" content="yes" />
-	<meta name="x5-fullscreen" content="true">
-	<link rel="stylesheet" href="css/weui.min.css">
-	<link rel="stylesheet" href="css/jquery-weui.min.css">
-	<link rel="stylesheet" href="css/index.min.css">
+    <meta charset="UTF-8">
+    <title>年管加，自助专利管理和专利年费缴纳云平台！</title>
+    <meta name="keywords" content="年管加，自助专利管理和专利年费缴纳云平台！" />
+    <meta name="description" content="年管加，自助专利管理和专利年费缴纳云平台！" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true">
+    <link rel="stylesheet" href="css/weui.min.css">
+    <link rel="stylesheet" href="css/jquery-weui.min.css">
+    <link rel="stylesheet" href="css/index.css">
 
-	<script src="js/jquery.min.js"></script>
-	<script src="js/fastclick.min.js"></script>
-	<script src="js/jquery-weui.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/fastclick.min.js"></script>
+    <script src="js/jquery-weui.min.js"></script>
 
 </head>
 <body ontouchstart>
-	<header class="nav-top">
-		<h1>首页</h1>
-	</header>		
-	<div class="content">
-		<div class="banner"><img src="images/banner.jpg" alt=""></div>
-		<div class="novice-guide">
-			<h2><i></i>新手指引</h2>
-			<div class="steps">
-				<div class="step"><a href="#"><i></i>Step1. 注册登入完善信息</a></div>
-				<div class="step"><a href="#"><i></i>Step2. 查询关注自己的专利</a></div>
-				<div class="step"><a href="#"><i></i>Step3. 管理专利和缴纳年费</a></div>
-			</div>
-		</div>
-		<div class="intro">
-			<div class="fl">
-				<div class="comment"><a href="#">试用评价</a></div>
-			</div>
-			<div class="fr">
-				<div class="about"><a href="#">关于我们</a></div>
-				<div class="contact"><a href="#">联系我们</a></div>
-			</div>
-		</div>
-	</div>
-	
+    <div class="search-bar search-bar-top" >
+        <div class="search-bar-box">
+          <i class="weui-icon-search"></i>
+          <input type="search" class="search-bar-input" id="searchInput" placeholder="输入专利号/权利人/权利人地址" required>
+        </div>
+        <a class="search-bar-btn" href="./search.html">查询</a>
+    </div>      
+    <div class="content">
+        <div class="banner"><img src="images/banner.jpg" alt=""></div>
+        <div class="novice-guide">
+            <h2><i></i><span>新手指引</span></h2>
+            <div class="steps">
+                <div class="step"><a href="#"><i></i><b>Step1</b>注册登入完善信息</a></div>
+                <div class="step"><a href="#"><i></i><b>Step2</b>查询关注自己的专利</a></div>
+                <div class="step"><a href="#"><i></i><b>Step3</b>管理专利和缴纳年费</a></div>
+            </div>
+        </div>
+        <div class="intro">
+            <div class="fl">
+                <div class="comment"><a href="#">试用评价</a></div>
+            </div>
+            <div class="fr">
+                <div class="about"><a href="#">关于我们</a></div>
+                <div class="contact"><a href="#">联系我们</a></div>
+            </div>
+        </div>
+    </div>
+    
 
-	<div class="weui-tabbar">
-		<a href="./index.html" class="weui-tabbar__item weui-bar__item--on">
-			<div class="weui-tabbar__icon icon-home"></div>
-			<p class="weui-tabbar__label">首页</p>
-		</a>
-		<a href="#" class="weui-tabbar__item">
-			<div class="weui-tabbar__icon icon-patent"></div>
-			<p class="weui-tabbar__label">我的专利</p>
-		</a>
-		<a href="#" class="weui-tabbar__item">
-			<div class="weui-tabbar__icon icon-find"></div>
-			<p class="weui-tabbar__label">查询关注</p>
-		</a>
-		<a href="#" class="weui-tabbar__item">
-			<div class="weui-tabbar__icon icon-bill"></div>
-			<p class="weui-tabbar__label">我的订单</p>
-		</a>
-		<a href="#" class="weui-tabbar__item">
-			<div class="weui-tabbar__icon icon-me"></div>
-			<p class="weui-tabbar__label">我的账户</p>
-		</a>
-		
-	</div>
-	<script>
-		$(function() {
-			FastClick.attach(document.body);
-
-		});
-	</script>
+    <div class="weui-tabbar">
+        <a href="./index.html" class="weui-tabbar__item weui-bar__item--on">
+            <div class="weui-tabbar__icon icon-home"></div>
+            <p class="weui-tabbar__label">首页</p>
+        </a>
+        <a href="#" class="weui-tabbar__item">
+            <div class="weui-tabbar__icon icon-patent"></div>
+            <p class="weui-tabbar__label">我的专利</p>
+        </a>
+<!--        <a href="#" class="weui-tabbar__item">
+            <div class="weui-tabbar__icon icon-find"></div>
+            <p class="weui-tabbar__label">查询关注</p>
+        </a> -->
+        <a href="#" class="weui-tabbar__item">
+            <div class="weui-tabbar__icon icon-bill"></div>
+            <p class="weui-tabbar__label">我的订单</p>
+        </a>
+        <a href="#" class="weui-tabbar__item">
+            <div class="weui-tabbar__icon icon-me"></div>
+            <p class="weui-tabbar__label">我的账户</p>
+        </a>
+        
+    </div>
+    <script>
+        $(function() {
+            FastClick.attach(document.body);
+            $('#searchInput').on('focus', function() {
+                window.location.href='/search.html'
+            });
+        });
+    </script>
 </body>
 </html>
