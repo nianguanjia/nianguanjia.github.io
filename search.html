@@ -34,50 +34,38 @@
         <ul class="patent-list" id="patent-list">
             <li>
                 <a href="./detail.html">
-                    <p><b>序号：</b><span>1</span></p>
-                    <p><b>专利号：</b><span>201610007711.0</span></p>
-                    <p><b>申请日：</b><span>2016年01月06日</span></p>
-                    <p><b>名称：</b><span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></p>
-                    <p><b>专利权人：</b><span>湖南农业大学</span></p>
-                    <p><b>专利权人地址：</b><span>湖南省长沙市芙蓉区东湖湖南农业大学</span></p>
-                    <p><b>授权公告日：</b><span>2017年02月22日</span></p>
-                    <p><b>操作：</b><span><button id="follow-btn">关注</button></span></p>
+                    <p><span>专利号：201610007711.0</span><button class="follow-btn followed">已关注</button></p>
+                    <p>专利名：<span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></p>
                 </a>
             </li>
             <li>
                 <a href="./detail.html">
-                    <p><b>序号：</b><span>2</span></p>
-                    <p><b>专利号：</b><span>201410701077.1</span></p>
-                    <p><b>申请日：</b><span>2014年11月28日</span></p>
-                    <p><b>名称：</b><span>一种赶黄草保健茶的制备方法</span></p>
-                    <p><b>专利权人：</b><span>四川大学</span></p>
-                    <p><b>专利权人地址：</b><span>四川省成都市一环路南一段24号</span></p>
-                    <p><b>授权公告日：</b><span>2017年02月22日</span></p>
-                    <p><b>操作：</b><button id="follow-btn">关注</button></p>
+                    <p><span>专利号：201610007711.0</span><button class="follow-btn ">关注</button></p>
+                    <p>专利名：<span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></p>
                 </a>
             </li>
             <li>
                 <a href="./detail.html">
-                    <p><b>序号：</b><span>3</span></p>
-                    <p><b>专利号：</b><span>201380005701.8</span></p>
-                    <p><b>申请日：</b><span>2013年01月15日</span></p>
-                    <p><b>名称：</b><span>组合物</span></p>
-                    <p><b>专利权人：</b><span>亿滋英国研究和开发有限公司</span></p>
-                    <p><b>专利权人地址：</b><span>英国西米德兰兹伯明翰</span></p>
-                    <p><b>授权公告日：</b><span>2017年02月22日</span></p>
-                    <p><b>操作：</b><button id="follow-btn">关注</button></p>
+                    <p><span>专利号：201610007711.0</span><button class="follow-btn followed">已关注</button></p>
+                    <p>专利名：<span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></p>
                 </a>
             </li>
             <li>
                 <a href="./detail.html">
-                    <p><b>序号：</b><span>4</span></p>
-                    <p><b>专利号：</b><span>201280015732.7</span></p>
-                    <p><b>申请日：</b><span>2012年03月19日</span></p>
-                    <p><b>名称：</b><span>具有改善的热激稳定性的冷冻甜品</span></p>
-                    <p><b>授权公告日：</b><span>2017年02月22日</span></p>
-                    <p><b>专利权人地址：</b><span>瑞士沃韦</span></p>
-                    <p><b>授权公告日：</b><span>2017年02月22日</span></p>
-                    <p><b>操作：</b><button id="follow-btn">关注</button></p>
+                    <p><span>专利号：201610007711.0</span><button class="follow-btn">关注</button></p>
+                    <p>专利名：<span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></p>
+                </a>
+            </li>
+            <li>
+                <a href="./detail.html">
+                    <p><span>专利号：201610007711.0</span><button class="follow-btn followed">已关注</button></p>
+                    <p>专利名：<span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></p>
+                </a>
+            </li>
+            <li>
+                <a href="./detail.html">
+                    <p><span>专利号：201610007711.0</span><button class="follow-btn ">关注</button></p>
+                    <p>专利名：<span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></p>
                 </a>
             </li>
         </ul>
@@ -128,7 +116,7 @@
                 //     }
                 // });
                 
-                $('#patent-list').append('<p> 我是新加载的内容 </p>');
+                $('#patent-list').append('<p>这是滚动加载的内容！！！</p>');
                 loading = false;
               }, 1500);   //模拟延迟
             });
@@ -150,11 +138,29 @@
 
                     //     }
                     // });
+                }else{
+                	alert('请输入关键词再查找');
                 }
             });
 
             // 关注
-            
+            $('#follow-btn').on('click', function() {
+                // to do
+                // $.$.ajax({
+                //     url: '',
+                //     type: 'POST',
+                //     dataType: 'json',
+                //     data: {
+                //         param1: 'value1'
+                //     },
+                //     success: function(data){
+                //        // to do
+
+
+                //     }
+                // });
+                
+            });
         });
     </script>
 </body>

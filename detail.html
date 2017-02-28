@@ -27,7 +27,7 @@
 		<h1>详情页</h1>
 	</header>		
 	<div class="content">
-		<div class="info-item basic-info">
+		<div class="info-item">
 			<h3>专利基本信息</h3>
 			<p>专利号：<span>201610007711.0</span></p>
 			<p>申请日：<span>2016年01月06日</span></p>
@@ -39,14 +39,26 @@
 			<p>授权公告日：<span>2017年2月22日</span></p>
 			<p>专利摘要：<span></span></p>
 		</div>
-		<div class="info-item price-info">
+		<div class="info-item">
+			<h3>专利状态</h3>
+			<!-- <label for="status-01"><input type="radio" name="patentStatus" value="3" id="status-01">已缴费</label>
+			<label for="status-02"><input type="radio" name="patentStatus" value="8" id="status-02">拟转让</label>
+			<label for="status-03"><input type="radio" name="patentStatus" value="-1" id="status-03">已转让</label>
+			<label for="status-04"><input type="radio" name="patentStatus" value="6" id="status-04">已放弃</label> -->
+			<b>请选择：</b>
+			<button class="status">已缴费</button>
+			<button class="status">拟转让</button>
+			<button class="status">已转让</button>
+			<button class="status">已放弃</button>
+		</div>
+		<div class="info-item">
 			<h3>专利费用信息</h3>
 			<p>专利年费：<span>无</span></p>
 			<p>收据号：<span></span></p>
 			<p>缴费年度：<span> 无</span></p>
 			<p>缴费日期：<span></span></p>
 		</div>
-		<div class="info-item detail-info">
+		<div class="info-item">
 			<h3>专利详细信息</h3>
 			<p>其它专利权人：<span></span></p>
 			<p>授权公告号：<span> CN 105638958 B</span></p>
@@ -63,6 +75,7 @@
 			<p>代理人：<span> 何为 袁颖华</span></p>
 			<p>主权利要求：<span></span></p>
 		</div>
+		
 		<div class="btns-box">
 			<button class="disabled-btn">暂时不能缴费</button>
 			<button>历史缴费信息查看</button>

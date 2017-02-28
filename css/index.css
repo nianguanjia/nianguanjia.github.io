@@ -233,40 +233,35 @@ button{
 }
 .patent-list{
   width:100%;
-  background-color: #d2d5da;
+  background-color: #fff;
 }
 .patent-list li{
+  box-sizing: border-box;
   width:100%;
   margin-bottom: 0.5rem;
-  background-color: #fff;
+  padding:0.2rem 0.5rem;
+  background-color: #f2f2f2;
 }
 .patent-list a p{
   color:#575757;
   line-height: 1.8rem;
-  border-bottom: 1px dashed #eee;
   font-size: 14px;
 }
-.patent-list p b{
-  display: inline-block;
-  width:28%;
-  min-width:100px;
-  margin-right: 5px;
-  font-weight: normal;
-  text-align: right;
-  vertical-align: middle;
-}
-.patent-list p span{
-  display: inline-block;
-  width:66%;
-  vertical-align: middle;
+.patent-list a p:nth-child(odd){
+  border-bottom:1px solid #e0e2e4;;
 }
 
 .patent-list p button{
-  display: inline-block;
-  padding:4px 16px;
+  float: right;
+  width:4rem;
+  padding:0.2rem 0.5rem;
+  margin-top: 0.25rem;
+  margin-right: 0.25rem;
   color:#fff;
   background-color: #00b9ff;
-  border:1px solid #00b9ff;
+}
+.patent-list p button.followed{
+  background-color: #959a9e;
 }
 .search-bar-top{
   position: fixed;
@@ -314,7 +309,6 @@ button{
 }
 
 
-
 .search-results{
   position: fixed;
   top:2.2rem;
@@ -323,24 +317,27 @@ button{
 
 /*detail*/
 .info-item{
-  margin-bottom: 20px;
+  font-size: 0;
 }
 .info-item h3{
-  line-height: 35px;
-  font-size: 20px;
-  color:#000;
-  background-color: #f2f2f2;
+  line-height: 1.8rem;
+  font-size: 0.9rem;
+  color:#fff;
+  background-color: #68c0e8;
   font-weight: normal;
   text-indent: 1em;
 }
 .info-item p{
-  padding:4px 10px;
-  line-height: 25px;
+  padding:0.2rem 0.5rem;
+  line-height: 1.3rem;
   color:#555;
-  font-size: 14px;
+  font-size: 0.7rem;
+}
+.info-item p:nth-child(odd){
+  background-color: #f2f2f2;
 }
 .btns-box{
-  margin-left: 10px;
+  margin-left: 0.5rem;
 }
 .btns-box:after{
   display: block;
@@ -350,13 +347,40 @@ button{
 .btns-box button{
   float: left;
   width:45%;
-  padding:10px;
-  height:40px;
-  margin:10px 5px;
+  padding:0.5rem;
+  height:2rem;
+  margin:0.5rem 0.25rem;
   color:#fff;
   background-color: #00a0fc;
 }
 .btns-box .disabled-btn{
-
   background-color: #666;
 }
+/*.info-item label{
+  display: inline-block;
+  width:25%;
+  font-size: 0.8rem;
+  line-height: 1.8rem;
+}*/
+.info-item b{
+  display: inline-block;
+  width:18%;
+  margin:0.5rem 1%;
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+.info-item button{
+  display: inline-block;
+  width:18%;
+  margin:0.5rem 1%;
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+  color:#4a4b50;
+  background-color: #fff;
+  border:2px solid #e3e3e3;
+  border-radius: 0.75rem;
+
+  
+}
+
