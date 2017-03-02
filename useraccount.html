@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>年管加，自助专利管理和专利年费缴纳云平台！</title>
+	<meta name="keywords" content="年管加，自助专利管理和专利年费缴纳云平台！" />
+	<meta name="description" content="年管加，自助专利管理和专利年费缴纳云平台！" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="full-screen" content="yes" />
+	<meta name="x5-fullscreen" content="true">
+	<link rel="stylesheet" href="css/weui.min.css">
+	<link rel="stylesheet" href="css/jquery-weui.min.css">
+	<link rel="stylesheet" href="css/index.css">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/fastclick.min.js"></script>
+	<script src="js/jquery-weui.min.js"></script>
+
+</head>
+<body class="bg-grey" ontouchstart>
+	<header class="nav-top">
+		<a href="javascript:history.go(-1);" class="back-btn"></a>
+		<h1>详情页</h1>
+	</header>		
+	<div class="content" >
+		<div class="user-info">
+			<div class="user-name">
+				<p>Mr. Wong, 您好！</p>
+				<p>欢迎来到年管加</p>
+			</div>
+		</div>
+		<a class="user-cart">
+			<button>我的购物车</button>
+		</a>
+		<ul class="more-info">
+			<li>
+				<a href="./addinfo.html" class="add-info">
+					<i></i>
+					<p>完善信息</p>
+				</a>
+			</li>
+			<li>
+				<a href="./bindaccount.html"  class="bind-account">
+					<i></i>
+					<p>账号绑定</p>
+				</a>
+			</li>
+			<li>
+				<a href="./changepwd.html"  class="change-pwd">
+					<i></i>
+					<p>密码修改</p>
+				</a>
+			</li>
+			<li>
+				<a href="./bingpatentholder.html"  class="bing-patent-holder">
+					<i></i>
+					<p>绑定专利权人</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="weui-tabbar">
+		<a href="./index.html" class="weui-tabbar__item">
+			<div class="weui-tabbar__icon icon-home"></div>
+			<p class="weui-tabbar__label">首页</p>
+		</a>
+		<a href="#" class="weui-tabbar__item">
+			<div class="weui-tabbar__icon icon-patent"></div>
+			<p class="weui-tabbar__label">我的专利</p>
+		</a>
+		<a href="#" class="weui-tabbar__item">
+			<div class="weui-tabbar__icon icon-bill"></div>
+			<p class="weui-tabbar__label">我的订单</p>
+		</a>
+		<a href="./useraccount.html" class="weui-tabbar__item weui-bar__item--on">
+			<div class="weui-tabbar__icon icon-me"></div>
+			<p class="weui-tabbar__label">我的账户</p>
+		</a>
+	</div>
+	<div class="m-popup transfer-popup" style="display: none" id="transfer-popup">
+		<div class="m-popup-mask"></div>
+		<div class="m-popup-inner">
+			<div class="transfer-price">
+				<label for="t-price">转让意向价格：</label><input type="text" placeholder="请输入转让意向价格" id="t-price">
+			</div>
+			<div class="transfer-phone">
+				<label for="t-phone">联系方式：</label><input type="text" placeholder="可空" id="t-phone">
+			</div>
+			<div class="transfer-btns">
+				<button class="btn-ok" id="btn-ok">确定</button>
+				<button class="btn-cancel" id="btn-cancel">取消</button>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(function() {
+			FastClick.attach(document.body);
+		});
+	</script>
+</body>
+</html>

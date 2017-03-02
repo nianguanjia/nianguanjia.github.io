@@ -6,6 +6,13 @@ button{
 	outline: none;
 	border: none;
 }
+ul,ol,li{
+	list-style: none;
+}
+.bg-grey{
+	background: #f2f4f8;
+}
+
 .nav-top{
 	position: fixed;
 	top:0;
@@ -17,8 +24,7 @@ button{
 	padding-right: .5rem;
 	padding-left: .5rem;
 	color:#fff;
-	background-color: #4996f9;
-	border-bottom: 1px solid #f2f2f2;
+	background-color: #00b9ff;
 }
 .back-btn{
 	display: block;
@@ -103,7 +109,6 @@ button{
 	box-sizing: border-box;
 	width:100%;
 	padding:0.5rem 0.75rem;
-	/*margin-bottom: 1rem;*/
 
 }
 .intro:after{
@@ -279,7 +284,7 @@ button{
 	width:100%;
 	height:2.2rem;
 	padding:0 1%;
-	background: #4996f9;
+	background: #00b9ff;
 	
 }
 .search-bar-box{
@@ -309,7 +314,7 @@ button{
 	margin-top: 0.35rem;
 	margin-left: 1%;
 	color:#fff;
-	background: #4996f9;
+	background: #00b9ff;
 	font-size: 16px;
 	text-align: center;
 }
@@ -464,4 +469,89 @@ button{
 	margin-right: 20px;
 	color:#fff;
 	background-color: #00a0fc;
+}
+
+/*user account*/
+.user-info{
+	width:100%;
+	height:8.85rem;
+	background-color: #00b9ff;
+}
+.user-name{
+	padding-top: 2.5rem;
+	color:#fff;
+	text-align: center;
+}
+.user-cart{
+	display: block;
+	width:6.3rem;
+	height:2rem;
+	margin:-0.75rem auto 0;
+	padding-top: 0.2rem;
+	background: #f2f4f8;
+	border-radius: 1rem;
+	position: relative;
+	z-index: 200;
+}
+.user-cart button{
+	display: block;
+	width:5.7rem;
+	height:1.8rem;
+	margin:0 auto;
+	line-height: 1.8rem;
+	border-radius: 0.9rem;
+	color:#fff;
+	background-color: #00b9ff;
+}
+
+.more-info {
+	box-sizing: border-box;
+	width:100%;
+	padding-top: 2.4rem;
+	padding:2.4rem 3%;
+}
+.more-info:after{
+	display: block;
+	content:"";
+	clear: both;
+}
+.more-info li{
+	float: left;
+	width:44%;
+	height:6.25rem;
+	margin:0.5rem 3%;
+	font-size: 0.8rem;
+	background-color: #fff;
+}
+.more-info li a{
+	display: block;
+	color:#767677;
+	text-align: center;
+
+}
+.more-info i{
+	display: block;
+	margin:1.25rem auto 0.25rem;
+	width:2.8rem;
+	height:2.8rem;
+}
+.add-info i{
+	background:url(../images/icon-info-01.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.bind-account i{
+	background:url(../images/icon-info-02.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.change-pwd i{
+	background:url(../images/icon-info-03.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.bing-patent-holder i{
+	background:url(../images/icon-info-04.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
