@@ -133,24 +133,35 @@
 
 			// 关注
 			$('.follow-btn').on('click', function() {
+				// 需要先判断是否登录
 				var self = $(this);
-				if (!self.hasClass('followed')) {
-					// to do
-					// $.$.ajax({
-					//     url: '',
-					//     type: 'POST',
-					//     dataType: 'json',
-					//     data: {
-					//         param1: 'value1'
-					//     },
-					//     success: function(data){
-					//        // to do
-							alert("关注成功，请于次日登录查看相关专利的最新状态");
-							self.addClass('followed');
+				var isLogin;
 
-					//     }
-					// });
+				if (isLogin) {
+					// 已登录
+					if (!self.hasClass('followed')) {
+						// to do
+						// $.$.ajax({
+						//     url: '',
+						//     type: 'POST',
+						//     dataType: 'json',
+						//     data: {
+						//         param1: 'value1'
+						//     },
+						//     success: function(data){
+						//        // to do
+								alert("关注成功，请于次日登录查看相关专利的最新状态");
+								self.addClass('followed');
+
+						//     }
+						// });
+					}
+				}else{
+					// 弹窗登录框或切换到登录页
+
 				}
+				
+				
 				
 				
 			});
