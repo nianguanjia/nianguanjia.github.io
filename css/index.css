@@ -244,12 +244,12 @@ button{
 	padding:0.2rem 0.5rem;
 	background-color: #fff;
 }
-.patent-list a p{
+.patent-list  p{
 	color:#575757;
 	line-height: 1.8rem;
 	font-size: 14px;
 }
-.patent-list a p:nth-child(odd){
+.patent-list li{
 	border-bottom:1px solid #e0e2e4;;
 }
 
@@ -264,6 +264,10 @@ button{
 }
 .patent-list p button.followed{
 	background-color: #959a9e;
+}
+.patent-list p a{
+	display: inline-block;
+	color:#575757;
 }
 .search-bar-top{
 	position: fixed;

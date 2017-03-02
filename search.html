@@ -1,167 +1,160 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>年管加，自助专利管理和专利年费缴纳云平台！</title>
-    <meta name="keywords" content="年管加，自助专利管理和专利年费缴纳云平台！" />
-    <meta name="description" content="年管加，自助专利管理和专利年费缴纳云平台！" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="full-screen" content="yes" />
-    <meta name="x5-fullscreen" content="true">
-    <link rel="stylesheet" href="css/weui.min.css">
-    <link rel="stylesheet" href="css/jquery-weui.min.css">
-    <link rel="stylesheet" href="css/index.css">
+	<meta charset="UTF-8">
+	<title>年管加，自助专利管理和专利年费缴纳云平台！</title>
+	<meta name="keywords" content="年管加，自助专利管理和专利年费缴纳云平台！" />
+	<meta name="description" content="年管加，自助专利管理和专利年费缴纳云平台！" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="full-screen" content="yes" />
+	<meta name="x5-fullscreen" content="true">
+	<link rel="stylesheet" href="css/weui.min.css">
+	<link rel="stylesheet" href="css/jquery-weui.min.css">
+	<link rel="stylesheet" href="css/index.css">
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/fastclick.min.js"></script>
-    <script src="js/jquery-weui.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/fastclick.min.js"></script>
+	<script src="js/jquery-weui.min.js"></script>
 
 </head>
 <body ontouchstart>     
-    <div class="content">
-        <div class="search-bar search-bar-top" >
-            <a href="javascript:history.go(-1);" class="back-btn"></a>
-            <div class="search-bar-box" style="width:70%;margin-left: 10%">
-                <i class="weui-icon-search"></i>
-                <input type="search" class="search-bar-input" id="searchInput" placeholder="输入专利号/权利人/权利人地址" required>
-            </div>
-            <a class="search-bar-btn" href="javascript:;" id="search-bar-btn">查询</a>
-        </div>
-        <ul class="patent-list" id="patent-list">
-            <li>
-                <a href="./detail.html">
-                    <p><span>专利号：201610007711.0</span><button class="follow-btn followed">已关注</button></p>
-                    <p>专利名：<span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></p>
-                </a>
-            </li>
-            <li>
-                <a href="./detail.html">
-                    <p><span>专利号：201610007711.0</span><button class="follow-btn ">关注</button></p>
-                    <p>专利名：<span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></p>
-                </a>
-            </li>
-            <li>
-                <a href="./detail.html">
-                    <p><span>专利号：201610007711.0</span><button class="follow-btn followed">已关注</button></p>
-                    <p>专利名：<span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></p>
-                </a>
-            </li>
-            <li>
-                <a href="./detail.html">
-                    <p><span>专利号：201610007711.0</span><button class="follow-btn">关注</button></p>
-                    <p>专利名：<span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></p>
-                </a>
-            </li>
-            <li>
-                <a href="./detail.html">
-                    <p><span>专利号：201610007711.0</span><button class="follow-btn followed">已关注</button></p>
-                    <p>专利名：<span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></p>
-                </a>
-            </li>
-            <li>
-                <a href="./detail.html">
-                    <p><span>专利号：201610007711.0</span><button class="follow-btn ">关注</button></p>
-                    <p>专利名：<span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></p>
-                </a>
-            </li>
-        </ul>
-        <div class="weui-loadmore">
-          <i class="weui-loading"></i>
-          <span class="weui-loadmore__tips">正在加载</span>
-        </div>
-    </div>
-    
+	<div class="content">
+		<div class="search-bar search-bar-top" >
+			<a href="javascript:history.go(-1);" class="back-btn"></a>
+			<div class="search-bar-box" style="width:70%;margin-left: 10%">
+				<i class="weui-icon-search"></i>
+				<input type="search" class="search-bar-input" id="searchInput" placeholder="输入专利号/权利人/权利人地址" required>
+			</div>
+			<a class="search-bar-btn" href="javascript:;" id="search-bar-btn">查询</a>
+		</div>
+		<ul class="patent-list" id="patent-list">
+			<li>
+				<p><span>专利号：201610007711.0</span><button class="follow-btn followed">已关注</button></p>
+				<p>专利名：<a href="./detail.html"><span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></a></p>
+			</li>
+			<li>
+				<p><span>专利号：201610007711.0</span><button class="follow-btn ">关注</button></p>
+				<p>专利名：<a href="./detail.html"><span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></a></p>
+			</li>
+			<li>
+				<p><span>专利号：201610007711.0</span><button class="follow-btn followed">已关注</button></p>
+				<p>专利名：<a href="./detail.html"><span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></a></p>
+			</li>
+			<li>
+				<p><span>专利号：201610007711.0</span><button class="follow-btn ">关注</button></p>
+				<p>专利名：<a href="./detail.html"><span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></a></p>
+			</li>
+			<li>
+				<p><span>专利号：201610007711.0</span><button class="follow-btn followed">已关注</button></p>
+				<p>专利名：<a href="./detail.html"><span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></a></p>
+			</li>
+			<li>
+				<p><span>专利号：201610007711.0</span><button class="follow-btn ">关注</button></p>
+				<p>专利名：<a href="./detail.html"><span>一种利用夏秋茶鲜叶加工桂花香味红茶的方法</span></a></p>
+			</li>
+		</ul>
+		<div class="weui-loadmore">
+		  <i class="weui-loading"></i>
+		  <span class="weui-loadmore__tips">正在加载</span>
+		</div>
+	</div>
+	
 
-    <div class="weui-tabbar">
-        <a href="./index.html" class="weui-tabbar__item">
-            <div class="weui-tabbar__icon icon-home"></div>
-            <p class="weui-tabbar__label">首页</p>
-        </a>
-        <a href="#" class="weui-tabbar__item">
-            <div class="weui-tabbar__icon icon-patent"></div>
-            <p class="weui-tabbar__label">我的专利</p>
-        </a>
-        <a href="#" class="weui-tabbar__item">
-            <div class="weui-tabbar__icon icon-bill"></div>
-            <p class="weui-tabbar__label">我的订单</p>
-        </a>
-        <a href="#" class="weui-tabbar__item">
-            <div class="weui-tabbar__icon icon-me"></div>
-            <p class="weui-tabbar__label">我的账户</p>
-        </a>
-        
-    </div>
-    <script>
-        $(function() {
-            FastClick.attach(document.body);
+	<div class="weui-tabbar">
+		<a href="./index.html" class="weui-tabbar__item">
+			<div class="weui-tabbar__icon icon-home"></div>
+			<p class="weui-tabbar__label">首页</p>
+		</a>
+		<a href="#" class="weui-tabbar__item">
+			<div class="weui-tabbar__icon icon-patent"></div>
+			<p class="weui-tabbar__label">我的专利</p>
+		</a>
+		<a href="#" class="weui-tabbar__item">
+			<div class="weui-tabbar__icon icon-bill"></div>
+			<p class="weui-tabbar__label">我的订单</p>
+		</a>
+		<a href="#" class="weui-tabbar__item">
+			<div class="weui-tabbar__icon icon-me"></div>
+			<p class="weui-tabbar__label">我的账户</p>
+		</a>
+		
+	</div>
+	<script>
+		$(function() {
+			FastClick.attach(document.body);
 
-            // 滚动加载
-            var loading = false;  //状态标记
-            $(document.body).infinite().on('infinite', function() {
-              if(loading) return;
-              loading = true;
-              setTimeout(function() {
-                // to do
-                // $.ajax({
-                //     url: '',
-                //     type: 'GET',
-                //     dataType: 'json',
-                //     success:function(data) {
-                //         // to do
+			// 滚动加载
+			var loading = false;  //状态标记
+			$(document.body).infinite().on('infinite', function() {
+			  if(loading) return;
+			  loading = true;
+			  setTimeout(function() {
+				// to do
+				// $.ajax({
+				//     url: '',
+				//     type: 'GET',
+				//     dataType: 'json',
+				//     success:function(data) {
+				//         // to do
 
-                //     }
-                // });
-                
-                $('#patent-list').append('<p>这是滚动加载的内容！！！</p>');
-                loading = false;
-              }, 1500);   //模拟延迟
-            });
+				//     }
+				// });
+				
+				$('#patent-list').append('<p>这是滚动加载的内容！！！</p>');
+				loading = false;
+			  }, 1500);   //模拟延迟
+			});
 
-            // 搜索查询
-            $('#search-bar-btn').on('click', function() {
-                var keywords =$('#searchInput').val();
-                if (keywords) {
-                    // $.ajax({
-                    //     url:'',
-                    //     type:'GET',
-                    //     data:{
-                    //         keywords: keywords,
-                    //     },
-                    //     dataType: 'json',
-                    //     success: function(data){
-                    //         // to do
+			// 搜索查询
+			$('#search-bar-btn').on('click', function() {
+				var keywords =$('#searchInput').val();
+				if (keywords) {
+					// $.ajax({
+					//     url:'',
+					//     type:'GET',
+					//     data:{
+					//         keywords: keywords,
+					//     },
+					//     dataType: 'json',
+					//     success: function(data){
+					//         // to do
 
 
-                    //     }
-                    // });
-                }else{
-                	alert('请输入关键词再查找');
-                }
-            });
+					//     }
+					// });
+				}else{
+					alert('请输入关键词再查找');
+				}
+			});
 
-            // 关注
-            $('#follow-btn').on('click', function() {
-                // to do
-                // $.$.ajax({
-                //     url: '',
-                //     type: 'POST',
-                //     dataType: 'json',
-                //     data: {
-                //         param1: 'value1'
-                //     },
-                //     success: function(data){
-                //        // to do
+			// 关注
+			$('.follow-btn').on('click', function() {
+				var self = $(this);
+				if (!self.hasClass('followed')) {
+					// to do
+					// $.$.ajax({
+					//     url: '',
+					//     type: 'POST',
+					//     dataType: 'json',
+					//     data: {
+					//         param1: 'value1'
+					//     },
+					//     success: function(data){
+					//        // to do
+							alert("关注成功，请于次日登录查看相关专利的最新状态");
+							self.addClass('followed');
 
-
-                //     }
-                // });
-                
-            });
-        });
-    </script>
+					//     }
+					// });
+				}
+				
+				
+			});
+		});
+	</script>
 </body>
 </html>
