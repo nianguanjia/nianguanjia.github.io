@@ -554,3 +554,65 @@ ul,ol,li{
 	-webkit-background-size: cover;
 	background-size: cover;
 }
+
+
+/*add info */
+.add-info-container{
+	line-height: 1.8rem;
+	color:#787a7c;
+	background-color: #fff;
+}
+.add-info-container li{
+	border-bottom: 1px solid #e3e3e3;
+}
+.add-info-container .input-title{
+	display: inline-block;
+	height:1.8rem;
+	width:31.25%;
+	min-width:5rem;
+	margin-right: 0.25rem;
+	font-size: 0.75rem;
+	text-align: right;
+	vertical-align: middle;
+	color:#000;
+}
+.add-info-container li span{
+	display: inline-block;
+	height:1.8rem;
+	vertical-align: middle;
+}
+.add-info-container input{
+	display: inline-block;
+	height:1.4rem;
+	width:62.5%;
+	vertical-align: middle;
+	border-radius: 3px;
+	border:1px solid #eee;
+	font-size: 12px;
+	text-indent: 1em;
+}
+.add-info-container input[type=radio]{
+	width:16px;
+	outline: none;
+}
+.add-info-container .raido-title{
+	font-size: 12px;
+	display: inline-block;
+	margin-right: 0.5rem;
+	width:90px;
+}
+.add-info-container .raido-title input{
+	margin-right: 6px;
+}
+.add-info-container .save-btn{
+	display: block;
+	width:85%;
+	height:2.2rem;
+	margin:0.6rem auto;
+	line-height: 2.4rem;
+	color:#fff;
+	background-color: #00b9ff;
+	font-size: 0.9rem;
+	text-align: center;
+	border-radius: 4px;
+}
