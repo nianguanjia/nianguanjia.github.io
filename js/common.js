@@ -37,25 +37,25 @@ function checkMobile(str) {
 }
 
 function checkexist(account,callback,account,acctype,msg){
-	$.ajax({
-		// url:''
-		type : 'POST',
-		dataType:'json',
-		data : {
-			data:account
-		},
-		success : function(data) {
-			var resultdata = data;
-			if (resultdata.code == 0) {
-				alert("账号已存在");
-				return;
-			} else if (resultdata.code == 202) {
-				callback(account,acctype,'',msg);
-			} else {
-				alert("账号输入有误，请重新输入");
-			}
-		}
-	});	
+	// $.ajax({
+	// 	// url:''
+	// 	type : 'POST',
+	// 	dataType:'json',
+	// 	data : {
+	// 		data:account
+	// 	},
+	// 	success : function(data) {
+	// 		var resultdata = data;
+	// 		if (resultdata.code == 0) {
+	// 			alert("账号已存在");
+	// 			return;
+	// 		} else if (resultdata.code == 202) {
+	// 			callback(account,acctype,'',msg);
+	// 		} else {
+	// 			alert("账号输入有误，请重新输入");
+	// 		}
+	// 	}
+	// });	
 }
 //判断数组是否有重复
 function isRepeat(arr) {
@@ -146,55 +146,55 @@ function update() {
 
 	var msgtype = $("input[name='msgtype']:checked").val();
 	
-	$.ajax({
-		// url: '',
-		type: 'POST',
-		dataType:'json',
-		data: {
-			userName: userName,
-			userType: userType,
-			patentName: patentName,
-			contactName: contactName,
-			contactMobile: contactMobile,
-			contactEmail:contactEmail,
-			emgContactName: emgContactName,
-			emgContactMobile: emgContactMobile,
-			msgtype: msgtype,
-			city:city,
-			address: address,
-			msgtype:msgtype
-		},
-		success: function(data) {
-			// to do
-			window.location.reload();
-		}
-	});
+	// $.ajax({
+	// 	// url: '',
+	// 	type: 'POST',
+	// 	dataType:'json',
+	// 	data: {
+	// 		userName: userName,
+	// 		userType: userType,
+	// 		patentName: patentName,
+	// 		contactName: contactName,
+	// 		contactMobile: contactMobile,
+	// 		contactEmail:contactEmail,
+	// 		emgContactName: emgContactName,
+	// 		emgContactMobile: emgContactMobile,
+	// 		msgtype: msgtype,
+	// 		city:city,
+	// 		address: address,
+	// 		msgtype:msgtype
+	// 	},
+	// 	success: function(data) {
+	// 		// to do
+	// 		window.location.reload();
+	// 	}
+	// });
 }
 
 
 function bind(account,acctype,smscode,msg){
-	$.ajax({
-		// url:''
-		type : 'POST',
-		dataType:'json',
-		data: {
-			account: account,
-			type:acctype,
-			smscode:smscode
-		},
-		success : function(data) {
-			var resultdata = data;
-			if (resultdata.code == Strings.nosession) {
-				nosession();
-				return false;
-			}
-			if (resultdata.code == 0) {
-				alert(msg);
-			} else {
-				alert("绑定失败");
-			}
-		}
-	});
+	// $.ajax({
+	// 	// url:''
+	// 	type : 'POST',
+	// 	dataType:'json',
+	// 	data: {
+	// 		account: account,
+	// 		type:acctype,
+	// 		smscode:smscode
+	// 	},
+	// 	success : function(data) {
+	// 		var resultdata = data;
+	// 		if (resultdata.code == Strings.nosession) {
+	// 			nosession();
+	// 			return false;
+	// 		}
+	// 		if (resultdata.code == 0) {
+	// 			alert(msg);
+	// 		} else {
+	// 			alert("绑定失败");
+	// 		}
+	// 	}
+	// });
 }
 
 function bindacc() {
@@ -254,27 +254,28 @@ function sendsmscode(){
 		return;
 	}
 	//产生验证码
-	$.ajax({
-		// url: '',
-		type : 'POST',
-		dataType:'json',
-		data : {
-			mobile: phone
-		},
-		success : function(data) {
-			var resultdata = data;
-			if (resultdata.code == 0) {
-				myalert("验证码已发送");
-				curCount=120;
-				// 设置button效果，开始计时
-				$("#sendCodemobile").attr("disabled", "disabled");
-				$("#sendCodemobile").text("请在" + curCount + "秒内输入验证码");
-				InterValObj = window.setInterval(SetRemainTime, 1000); // 启动计时器，1秒执行一次
-			} else {
-				alert("验证码发送失败");
-			}
-		}
-	});}
+	// $.ajax({
+	// 	// url: '',
+	// 	type : 'POST',
+	// 	dataType:'json',
+	// 	data : {
+	// 		mobile: phone
+	// 	},
+	// 	success : function(data) {
+	// 		var resultdata = data;
+	// 		if (resultdata.code == 0) {
+	// 			myalert("验证码已发送");
+	// 			curCount=120;
+	// 			// 设置button效果，开始计时
+	// 			$("#sendCodemobile").attr("disabled", "disabled");
+	// 			$("#sendCodemobile").text("请在" + curCount + "秒内输入验证码");
+	// 			InterValObj = window.setInterval(SetRemainTime, 1000); // 启动计时器，1秒执行一次
+	// 		} else {
+	// 			alert("验证码发送失败");
+	// 		}
+	// 	}
+	// });
+}
 
 //timer处理函数
 function SetRemainTime() {
@@ -329,32 +330,32 @@ function modpwd() {
 		return;
 	}
 
-	$.ajax({
-		// url:'',
-		type : 'POST',
-		dataType : "json",
-		data : {
-			oldPwd: oldpwd,
-			newPwd: newpwd
-		},
-		success : function(data) {
-			var resultdata = data;
-			if (resultdata.code == Strings.nosession) {
-				nosession();
-				return false;
-			}
-			if (resultdata.code == 0) {
-				alert("密码修改成功");
-				window.location.href = '/useraccount.html';
-			} else {
-				if (resultdata.code == 204) {
-					alert("密码不正确");
-				} else {
-					alert("密码修改失败");
-				}
-			}
-		}
-	});
+	// $.ajax({
+	// 	// url:'',
+	// 	type : 'POST',
+	// 	dataType : "json",
+	// 	data : {
+	// 		oldPwd: oldpwd,
+	// 		newPwd: newpwd
+	// 	},
+	// 	success : function(data) {
+	// 		var resultdata = data;
+	// 		if (resultdata.code == Strings.nosession) {
+	// 			nosession();
+	// 			return false;
+	// 		}
+	// 		if (resultdata.code == 0) {
+	// 			alert("密码修改成功");
+	// 			window.location.href = '/useraccount.html';
+	// 		} else {
+	// 			if (resultdata.code == 204) {
+	// 				alert("密码不正确");
+	// 			} else {
+	// 				alert("密码修改失败");
+	// 			}
+	// 		}
+	// 	}
+	// });
 }
 
 
@@ -383,30 +384,30 @@ function bindholder() {
 	
 	$.toast("正在自动为您添加关注", 3000);
 
-	$.ajax({
-		// url:''
-		type : 'POST',
-		data : {
-			obligee1: obligee1,
-			obligee2: obligee2,
-			obligee3: obligee3,
-			obligee4: obligee4,
-			obligee5: obligee5
-		},
-		success : function(data) {
-			var resultdata = data;
-			if (resultdata.code == 0) {
-				alert("绑定成功，自动关注专利"+resultdata.retData+"条，请于次日登录查看相关专利的最新状态");
-				setTimeout(function(){
-					window.location.href = '/.';
-				},2000);
-			} else if (211 == resultdata.code) {
-				alert("专利权人不存在或未找到对应专利信息。");
-			} else if (220 == resultdata.code) {
-				alert("请检查需要绑定的专利权人。");
-			} else {
-				alert("绑定失败");
-			}
-		}
-	});
+	// $.ajax({
+	// 	// url:''
+	// 	type : 'POST',
+	// 	data : {
+	// 		obligee1: obligee1,
+	// 		obligee2: obligee2,
+	// 		obligee3: obligee3,
+	// 		obligee4: obligee4,
+	// 		obligee5: obligee5
+	// 	},
+	// 	success : function(data) {
+	// 		var resultdata = data;
+	// 		if (resultdata.code == 0) {
+	// 			alert("绑定成功，自动关注专利"+resultdata.retData+"条，请于次日登录查看相关专利的最新状态");
+	// 			setTimeout(function(){
+	// 				window.location.href = '/.';
+	// 			},2000);
+	// 		} else if (211 == resultdata.code) {
+	// 			alert("专利权人不存在或未找到对应专利信息。");
+	// 		} else if (220 == resultdata.code) {
+	// 			alert("请检查需要绑定的专利权人。");
+	// 		} else {
+	// 			alert("绑定失败");
+	// 		}
+	// 	}
+	// });
 }
