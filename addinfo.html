@@ -19,6 +19,8 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/fastclick.min.js"></script>
 	<script src="js/jquery-weui.min.js"></script>
+	<script src="js/city-picker.js"></script>
+	<script src="js/common.js"></script>
 
 </head>
 <body class="bg-grey" ontouchstart>
@@ -26,23 +28,22 @@
 		<a href="javascript:history.go(-1);" class="back-btn"></a>
 		<h1>信息完善</h1>
 	</header>		
-	<div class="content" >
-		<div class="add-info-container">
+	<div class="container" >
+		<div class="addinfo-container">
 			<ul>
 				<li>
 					<span class="input-title">账号</span>
-					<span>17722446540</span>
+					<span>18912341234</span>
 				</li>
 				<li>
 					<label class="input-title" for="userName">用户名</label>
 					<input type="text" value="" id="userName">
 				</li>
 				<li>
-					<input type="hidden" id="usertype">
 					<label class="input-title">用户类别</label>
-					<label class="raido-title" for="utype1"><input type="radio" name="utype" value="1" id="utype1">专利权人</label>
+					<label class="raido-title" for="utype1"><input type="radio" name="utype" value="1" id="utype1" checked>专利权人</label>
 					<label class="raido-title" for="utype2"><input type="radio" name="utype" value="2" id="utype2">发明人</label>
-					<div style="padding-left: 31.25%;margin-left: 10px;margin-top: -16px;">
+					<div style="padding-left: 31.25%;margin-left:6px;margin-top: -12px;">
 						<label class="raido-title" for="utype3"><input type="radio" name="utype" value="3" id="utype3">企业联络人</label>
 						<label class="raido-title" for="utype4"><input type="radio" name="utype" value="4" id="utype4">个人申请人</label>
 					</div>
@@ -74,56 +75,19 @@
 				</li>
 				<li>
 					<label class="input-title" for="patentName">账单地址</label>
-					<select class="prov selectchild" id="province">
-						<option value="">请选择</option>
-						<option value="北京">北京</option>
-						<option value="天津">天津</option>
-						<option value="河北">河北</option>
-						<option value="山西">山西</option>
-						<option value="内蒙古">内蒙古</option>
-						<option value="辽宁">辽宁</option>
-						<option value="吉林">吉林</option>
-						<option value="黑龙江">黑龙江</option>
-						<option value="上海">上海</option>
-						<option value="江苏">江苏</option>
-						<option value="浙江">浙江</option>
-						<option value="安徽">安徽</option>
-						<option value="福建">福建</option>
-						<option value="江西">江西</option>
-						<option value="山东">山东</option>
-						<option value="河南">河南</option>
-						<option value="湖北">湖北</option>
-						<option value="湖南">湖南</option>
-						<option value="广东">广东</option>
-						<option value="广西">广西</option>
-						<option value="海南">海南</option>
-						<option value="重庆">重庆</option>
-						<option value="四川">四川</option>
-						<option value="贵州">贵州</option>
-						<option value="云南">云南</option>
-						<option value="西藏">西藏</option>
-						<option value="陕西">陕西</option>
-						<option value="甘肃">甘肃</option>
-						<option value="青海">青海</option>
-						<option value="宁夏">宁夏</option>
-						<option value="新疆">新疆</option>
-						<option value="香港">香港</option>
-						<option value="澳门">澳门</option>
-						<option value="台湾">台湾</option>
-						<option value="国外">国外</option>
-					</select>
-					<select class="city selectchild" id="city" disabled="disabled"></select>
-					<div style="padding-left: 31.25%;margin-left: 10px;margin-bottom: 6px;"><input type="text" id="address" placeholder="请输入详细地址"  style="width:94%" ></div>
+					<input type="text" id='city-picker' placeholder="请选择省市">
+					<div class="addr-box">
+						<input type="text" id="address" placeholder="请输入详细地址" >
+					</div>
 					
 				</li>
 				<li>
 					<label class="input-title">通知消息</label>
-					<input type="hidden" id="msgtype" value="0">
 					<label class="raido-title" for="msgtype1"><input type="radio" name="msgtype" value="1" id="msgtype1">关闭</label>
-					<label class="raido-title" for="msgtype2"><input type="radio" name="msgtype" value="0" id="msgtype2">打开</label>
+					<label class="raido-title" for="msgtype2"><input type="radio" name="msgtype" value="0" id="msgtype2" checked>打开</label>
 				</li>
 			</ul>
-			<button class="save-btn">立即保存</button>
+			<a class="save-btn" onclick="update()">立即保存</a>
 		</div>
 	</div>
 	
@@ -145,24 +109,12 @@
 			<p class="weui-tabbar__label">我的账户</p>
 		</a>
 	</div>
-	<div class="m-popup transfer-popup" style="display: none" id="transfer-popup">
-		<div class="m-popup-mask"></div>
-		<div class="m-popup-inner">
-			<div class="transfer-price">
-				<label for="t-price">转让意向价格：</label><input type="text" placeholder="请输入转让意向价格" id="t-price">
-			</div>
-			<div class="transfer-phone">
-				<label for="t-phone">联系方式：</label><input type="text" placeholder="可空" id="t-phone">
-			</div>
-			<div class="transfer-btns">
-				<button class="btn-ok" id="btn-ok">确定</button>
-				<button class="btn-cancel" id="btn-cancel">取消</button>
-			</div>
-		</div>
-	</div>
 	<script>
 		$(function() {
 			FastClick.attach(document.body);
+			$("#city-picker").cityPicker({
+			  showDistrict: false
+			});
 		});
 	</script>
 </body>

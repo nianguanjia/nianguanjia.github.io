@@ -19,49 +19,42 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/fastclick.min.js"></script>
 	<script src="js/jquery-weui.min.js"></script>
+	<script src="js/common.js"></script>
 
 </head>
 <body class="bg-grey" ontouchstart>
 	<header class="nav-top">
 		<a href="javascript:history.go(-1);" class="back-btn"></a>
-		<h1>我的账户</h1>
+		<h1>绑定专利权人</h1>
 	</header>		
 	<div class="content" >
-		<div class="user-info">
-			<div class="user-name">
-				<p>Mr. Wong, 您好！</p>
-				<p>欢迎来到年管加</p>
-			</div>
+		<div class="addinfo-container bindacc-container bindholder-container" >
+			<ul>
+				<li>
+					<label for="obligee1" class="input-title">第一专利权人：</label>
+					<input type="text" id="obligee1" placeholder="请输入专利权人名称">
+				</li>
+				<li>
+					<label for="obligee2" class="input-title">第一专利权人：</label>
+					<input type="text" id="obligee2"  placeholder="请输入专利权人名称" >
+				</li>
+				<li>
+					<label for="obligee3" class="input-title">第一专利权人：</label>
+					<input type="text" id="obligee3"  placeholder="请输入专利权人名称" >
+				</li>
+				<li>
+					<label for="obligee4" class="input-title">第一专利权人：</label>
+					<input type="text" id="obligee4"  placeholder="请输入专利权人名称" >
+				</li>
+				<li>
+					<label for="obligee5" class="input-title">第一专利权人：</label>
+					<input type="text" id="obligee5"  placeholder="请输入专利权人名称" >
+				</li>
+				<li class="tip"><p>注：*系统仅支持绑定专利的第一专利权人。绑定专利权人后会自动关注其专利（所有已授权专利及后续新授权专利）从而进行专利管理、监控、收取系统提醒及进行年费缴纳等操作；绑定操作只需执行一次，您随时可以解除绑定。系统限制一个用户最多绑定5个专利权人。。</p></li>
+			</ul>
+
+			<a class="save-btn" onclick="bindholder()">保存</a>
 		</div>
-		<a class="user-cart">
-			<button>我的购物车</button>
-		</a>
-		<ul class="more-info">
-			<li>
-				<a href="./addinfo.html" class="add-info">
-					<i></i>
-					<p>完善信息</p>
-				</a>
-			</li>
-			<li>
-				<a href="./bindaccount.html"  class="bind-account">
-					<i></i>
-					<p>账号绑定</p>
-				</a>
-			</li>
-			<li>
-				<a href="./changepwd.html"  class="change-pwd">
-					<i></i>
-					<p>密码修改</p>
-				</a>
-			</li>
-			<li>
-				<a href="./bindholder.html"  class="bing-patent-holder">
-					<i></i>
-					<p>绑定专利权人</p>
-				</a>
-			</li>
-		</ul>
 	</div>
 	
 	<div class="weui-tabbar">
@@ -82,7 +75,6 @@
 			<p class="weui-tabbar__label">我的账户</p>
 		</a>
 	</div>
-
 	<script>
 		$(function() {
 			FastClick.attach(document.body);

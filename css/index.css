@@ -9,6 +9,7 @@ button{
 ul,ol,li{
 	list-style: none;
 }
+
 .bg-grey{
 	background: #f2f4f8;
 }
@@ -42,7 +43,8 @@ ul,ol,li{
 	text-align: center;
 }
 
-.content{
+.content,
+.container{
 	padding-top: 2.2rem;
 	padding-bottom: 55px;
 }
@@ -273,6 +275,11 @@ ul,ol,li{
 .patent-list p a{
 	display: inline-block;
 	color:#575757;
+	width:80%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	vertical-align: middle;
 }
 .search-bar-top{
 	position: fixed;
@@ -474,11 +481,11 @@ ul,ol,li{
 /*user account*/
 .user-info{
 	width:100%;
-	height:8.85rem;
+	height:5.5rem;
 	background-color: #00b9ff;
 }
 .user-name{
-	padding-top: 2.5rem;
+	padding-top: 1rem;
 	color:#fff;
 	text-align: center;
 }
@@ -507,7 +514,8 @@ ul,ol,li{
 .more-info {
 	box-sizing: border-box;
 	width:100%;
-	padding:2.4rem 3% 0;
+	padding-top: 2rem;
+	/*padding:2.4rem 3% 0;*/
 }
 .more-info:after{
 	display: block;
@@ -557,54 +565,55 @@ ul,ol,li{
 
 
 /*add info */
-.add-info-container{
+.addinfo-container{
 	line-height: 1.8rem;
 	color:#787a7c;
 	background-color: #fff;
 }
-.add-info-container li{
+.addinfo-container li{
 	border-bottom: 1px solid #e3e3e3;
 }
-.add-info-container .input-title{
+.addinfo-container li:last-child{
+	border:none;
+}
+.addinfo-container .input-title{
 	display: inline-block;
 	height:1.8rem;
 	width:31.25%;
 	min-width:5rem;
-	margin-right: 0.25rem;
 	font-size: 0.75rem;
-	text-align: right;
 	vertical-align: middle;
-	color:#000;
+	color:#575757;
+	text-indent: 10px;
 }
-.add-info-container li span{
+.addinfo-container li span{
 	display: inline-block;
 	height:1.8rem;
 	vertical-align: middle;
 }
-.add-info-container input{
+.addinfo-container input{
 	display: inline-block;
 	height:1.4rem;
 	width:62.5%;
 	vertical-align: middle;
-	border-radius: 3px;
-	border:1px solid #eee;
+	border:none;
 	font-size: 12px;
 	text-indent: 1em;
 }
-.add-info-container input[type=radio]{
+.addinfo-container input[type=radio]{
 	width:16px;
 	outline: none;
 }
-.add-info-container .raido-title{
+.addinfo-container .raido-title{
 	font-size: 12px;
 	display: inline-block;
 	margin-right: 0.5rem;
 	width:90px;
 }
-.add-info-container .raido-title input{
+.addinfo-container .raido-title input{
 	margin-right: 6px;
 }
-.add-info-container .save-btn{
+.addinfo-container .save-btn{
 	display: block;
 	width:85%;
 	height:2.2rem;
@@ -615,4 +624,58 @@ ul,ol,li{
 	font-size: 0.9rem;
 	text-align: center;
 	border-radius: 4px;
+}
+.addinfo-container .addr-box{
+	padding-left:31.25%;
+	margin-left:6px;
+	margin-bottom: 6px;
+}
+.addinfo-container .addr-box input{
+	width:94%
+}
+
+
+/*bind account*/
+.bindacc-container{
+	/*padding-top:1.5rem;*/
+	background-color: #f2f4f8;
+}
+.bindacc-container li{
+	line-height: 2.5rem;
+	background-color: #fff;
+}
+.bindacc-container li span,
+.bindacc-container li .input-title{
+	height: 2.5rem;
+}
+.bindacc-container .save-btn{
+	/*margin-top: 2rem;*/
+}
+.bindacc-container .tip{
+	padding:10px;
+	font-size: 12px;
+	color:#ff8686;
+	line-height: 1.25rem;
+}
+.bindacc-container .smscode{
+	display: inline-block;
+	width:30%;
+}
+.bindacc-container .send-code{
+	float: right;
+	width:90px;
+	height:1.8rem;
+	line-height: 1.8rem;
+	margin-top: 0.35rem;
+	margin-right: 0.6rem;
+	color:#fff;
+	background-color:#00b9ff;
+	text-align: center;
+}
+
+.bindholder-container .input-title{
+	width:40%;
+}
+.bindholder-container li input{
+	width:50%;
 }

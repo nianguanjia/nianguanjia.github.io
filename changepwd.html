@@ -19,49 +19,33 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/fastclick.min.js"></script>
 	<script src="js/jquery-weui.min.js"></script>
+	<script src="js/common.js"></script>
 
 </head>
 <body class="bg-grey" ontouchstart>
 	<header class="nav-top">
 		<a href="javascript:history.go(-1);" class="back-btn"></a>
-		<h1>我的账户</h1>
+		<h1>密码修改</h1>
 	</header>		
 	<div class="content" >
-		<div class="user-info">
-			<div class="user-name">
-				<p>Mr. Wong, 您好！</p>
-				<p>欢迎来到年管加</p>
-			</div>
+		<div class="addinfo-container bindacc-container" >
+			<ul>
+				<li>
+					<label for="oldpwd" class="input-title">原密码：</label>
+					<input type="password" id="oldpwd" placeholder="请输入原密码" autocomplete="off">
+				</li>
+				<li>
+					<label for="newpwd" class="input-title">新密码：</label>
+					<input type="text" id="newpwd"  placeholder="请输入新密码" autocomplete="off" >
+				</li>
+				<li>
+					<label class="input-title" for="confirmpwd">确认密码：</label>
+					<input type="password" id="confirmpwd" placeholder="请再次输入新密码" autocomplete="off">
+				</li>
+			</ul>
+
+			<a class="save-btn" onclick="modpwd()">保存</a>
 		</div>
-		<a class="user-cart">
-			<button>我的购物车</button>
-		</a>
-		<ul class="more-info">
-			<li>
-				<a href="./addinfo.html" class="add-info">
-					<i></i>
-					<p>完善信息</p>
-				</a>
-			</li>
-			<li>
-				<a href="./bindaccount.html"  class="bind-account">
-					<i></i>
-					<p>账号绑定</p>
-				</a>
-			</li>
-			<li>
-				<a href="./changepwd.html"  class="change-pwd">
-					<i></i>
-					<p>密码修改</p>
-				</a>
-			</li>
-			<li>
-				<a href="./bindholder.html"  class="bing-patent-holder">
-					<i></i>
-					<p>绑定专利权人</p>
-				</a>
-			</li>
-		</ul>
 	</div>
 	
 	<div class="weui-tabbar">
@@ -82,7 +66,6 @@
 			<p class="weui-tabbar__label">我的账户</p>
 		</a>
 	</div>
-
 	<script>
 		$(function() {
 			FastClick.attach(document.body);
