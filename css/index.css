@@ -342,7 +342,7 @@ ul,ol,li{
 .info-item h3{
 	height:2rem;
 	line-height: 2rem;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	color:#3c3e41;
 	background-color: #fff;
 	font-weight: normal;
@@ -367,7 +367,9 @@ ul,ol,li{
 	content:"";
 	clear:both;
 }
-.btns-box button{
+.btns-box a{
+	display: block;
+	box-sizing: border-box;
 	float: left;
 	width:45%;
 	padding:0.5rem;
@@ -375,6 +377,7 @@ ul,ol,li{
 	margin:0.5rem 0.25rem;
 	color:#fff;
 	background-color: #00a0fc;
+	text-align: center;
 }
 .btns-box .disabled-btn{
 	background-color: #666;
@@ -395,7 +398,7 @@ ul,ol,li{
 	font-size: 0.65rem;
 	color:#787a7c;
 	background-color: #fff;
-	border:2px solid #a8a9ab;
+	border:1px solid #a8a9ab;
 	border-radius:3px;
 }
 .info-item>button.active{
@@ -705,10 +708,12 @@ ul,ol,li{
 .order-title{
 	width:100%;
 	height:1.75rem;
+	margin-bottom: 0.5rem;
 	line-height: 1.75rem;
-	color:#a4a6a8;
-	font-size: 0.7rem;
+	color:#55595d;
+	font-size: 0.75rem;
 	border-bottom: 1px solid #ebecef;
+
 }
 .order-title:after{
 	display: block;
@@ -782,7 +787,7 @@ ul,ol,li{
 }
 .order-content{
 	color: #787a7c;
-	line-height: 1.3rem;
+	line-height: 1.4rem;
 	font-size: 0.65rem;
 }
 .order-btns:after{
@@ -813,4 +818,37 @@ ul,ol,li{
 }
 .order-btns a.btn-cancle{
 	background-color: #7ddc70;
+}
+
+
+/*user patent*/
+.weui-tab .weui-navbar__item{
+	font-size: 12px;
+}
+.userpatent-box .patent-status{
+	float: right;
+	font-size:0.75rem;
+}
+.p-status1{
+	color:#f43530;
+}
+.p-status2{
+	color: #00b9ff;
+}
+.order-content p{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.p-status3{
+	color:#f43530;
+}
+.order-btns a.btn-cart{
+	width:6rem;
+	color:#fff;
+	background-color:#00b9ff;
+}
+.orders-lists>li>a{
+	display: block;
+	color:#575757;
 }
