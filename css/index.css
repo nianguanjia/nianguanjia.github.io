@@ -9,6 +9,17 @@ button{
 ul,ol,li{
 	list-style: none;
 }
+.fr{
+	float: right;
+}
+.fl{
+	float: left;
+}
+.clearfix:after{
+	display: block;
+	content:"";
+	clear:both;
+}
 
 .bg-grey{
 	background: #f2f4f8;
@@ -702,14 +713,14 @@ ul,ol,li{
 }
 .orders-lists li{
 	margin:10px 0;
-	padding:10px;
+	padding:0 10px 4px;
 	background-color: #fff;
 }
 .order-title{
 	width:100%;
-	height:1.75rem;
-	margin-bottom: 0.5rem;
-	line-height: 1.75rem;
+	height:1.5rem;
+	margin-bottom: 0.25rem;
+	line-height: 1.5rem;
 	color:#55595d;
 	font-size: 0.75rem;
 	border-bottom: 1px solid #ebecef;
@@ -728,31 +739,30 @@ ul,ol,li{
 }
 .order-status i{
     display: inline-block;
-    vertical-align: middle;
-    font: normal normal normal 14px/1 weui;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-size: 0.8rem;
-}
-.order-status i:before {
-    display: inline-block;
-    margin-left: .2em;
-    margin-right: .2em;
+	width:0.8rem;
+	height:0.8rem;
+	vertical-align: middle;
+	margin-right: 0.2rem;
+	margin-top: -0.2rem;
 }
 .status-unpaid,
 .status-unpaid i{
 	color: #f43530;
 }
-.status-unpaid i:before {
-    content: "\EA0B";
+.status-unpaid i {
+    background: url(../images/icon-o-unpaid.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
 
 .status-paid,
 .status-paid i{
 	color: #00b9ff;
 }
-.status-paid i:before{
-	content: "\EA06";
+.status-paid i{
+	background: url(../images/icon-o-paid.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
 
 .status-handling,
@@ -760,34 +770,22 @@ ul,ol,li{
 	color: #ee4e4e;
 }
 .status-handling i{
-	display: inline-block;
-	width:0.8rem;
-	height:0.8rem;
 	background: url(../images/icon-handling.png)center center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
-	vertical-align: middle;
-	margin-right: 0.2rem;
-	margin-top: -0.2rem;
 }
 .status-finished,
 .status-finished i{
 	color: #00b9ff;
 }
 .status-finished i{
-	display: inline-block;
-	width:0.8rem;
-	height:1.8rem;
-	background: url(../images/icon-finished.png)center center no-repeat;
+	background: url(../images/icon-o-finished.png)center center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
-	vertical-align: middle;
-	margin-right: 0.2rem;
-	margin-top: -0.5rem;
 }
 .order-content{
 	color: #787a7c;
-	line-height: 1.4rem;
+	line-height: 1.2rem;
 	font-size: 0.65rem;
 }
 .order-btns:after{
@@ -796,7 +794,7 @@ ul,ol,li{
 	clear:both;
 }
 .order-btns{
-	margin-top: 10px;
+	margin-top: 4px;
 }
 .order-btns a{
 	box-sizing: border-box;
@@ -821,13 +819,87 @@ ul,ol,li{
 }
 
 
-/*user patent*/
-.weui-tab .weui-navbar__item{
-	font-size: 12px;
+ul.o-cate li:nth-child(2) a i{
+	background: url(../images/icon-o-unpaid.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
+ul.o-cate li:nth-child(3) a i{
+	background: url(../images/icon-o-paid.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+ul.o-cate li:nth-child(4) a i{
+	background: url(../images/icon-handling.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+ul.o-cate li:nth-child(5) a i{
+	background: url(../images/icon-o-finished.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+/*user patent*/
 .userpatent-box .patent-status{
 	float: right;
 	font-size:0.75rem;
+}
+.userpatent-box{
+	padding-top: 2.2rem;
+	padding-bottom: 55px;
+}
+.p-category li a{
+	box-sizing: border-box;
+	display: block;
+	width:100%;
+	height:2.5rem;
+	line-height: 2.5rem;
+	color:#787a7c;
+	background-color: #fff;
+	font-size: 0.75rem;
+	padding:0 0.75rem;
+	border-bottom: 1px solid #e3e3e3;
+}
+.p-category li a i{
+	display: inline-block;
+	width:1.15rem;
+	height: 1.15rem;
+	vertical-align: middle;
+	margin-right: 0.4rem;
+}
+.p-category li:nth-child(1) a i{
+	background: url(../images/icon-all.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.p-category li:nth-child(2) a i{
+	background: url(../images/icon-unpaid.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.p-category li:nth-child(3) a i{
+	background: url(../images/icon-paid.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.p-category li:nth-child(4) a i{
+	background: url(../images/icon-overdue.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.p-category li:nth-child(5) a i{
+	background: url(../images/icon-recovery.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.p-category li:nth-child(6) a i{
+	background: url(../images/icon-ineffective.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.p-category li a span{
+	float: right;
 }
 .p-status1{
 	color:#f43530;
@@ -843,12 +915,87 @@ ul,ol,li{
 .p-status3{
 	color:#f43530;
 }
-.order-btns a.btn-cart{
-	width:6rem;
-	color:#fff;
-	background-color:#00b9ff;
+
+.checkbox{
+	display: inline-block;
+	margin-right: 8px;
+	vertical-align: middle;
+}
+.btn-cart{
+	float: right;
+	display: block;
+	height:1.25rem;
+	width:1.25rem;
+	margin-top: 0.125rem;
+	margin-right: 0.5rem;
+	background: url(../images/icon-cart.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
 .orders-lists>li>a{
 	display: block;
 	color:#575757;
 }
+.order-content>p>span,
+.order-content>p>b{
+	display: inline-block;
+	width:50%;
+	font-weight: normal;
+}
+.order-content>p>span:nth-child(1){
+	width:60%;
+}
+.order-content>p>span:nth-child(2){
+	width:40%;
+}
+.countdown{
+	color:red;
+}
+
+
+.sum{
+	padding:10px;
+	background: #fff;
+}
+.sum label{
+	display: inline-block;
+	line-height: 3rem;
+}
+.sum .select-all{
+	margin-right: 5px;
+}
+.sum .fl{
+	height:3rem;
+}
+.sum .fl .amount{
+	height:1.2rem;
+	line-height: 1.2rem;
+	font-size: 0.6rem;
+	color:#787a7c;
+}
+.sum .fl .amount b{
+	color:red;
+	margin:0 6px;
+}
+.sum .fl .money{
+	height:1.5rem;
+	line-height: 1.5rem;
+	font-size: 0.7rem;
+	color: #ee4e4e;
+}
+.settle-btn{
+	display: block;
+	height:2rem;
+	width:100%;
+	line-height: 2rem;
+	margin-top: 0.5rem;
+	text-align: center;
+	color: #fff;
+	background: #00b9ff;
+	font-size: 0.9rem;
+}
+.price>b{
+	font-weight: normal;
+}
+
+

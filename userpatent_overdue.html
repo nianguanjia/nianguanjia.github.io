@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>年管加，自助专利管理和专利年费缴纳云平台！</title>
+	<meta name="keywords" content="年管加，自助专利管理和专利年费缴纳云平台！" />
+	<meta name="description" content="年管加，自助专利管理和专利年费缴纳云平台！" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="full-screen" content="yes" />
+	<meta name="x5-fullscreen" content="true">
+	<link rel="stylesheet" href="css/weui.min.css">
+	<link rel="stylesheet" href="css/jquery-weui.min.css">
+	<link rel="stylesheet" href="css/index.css">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/fastclick.min.js"></script>
+	<script src="js/jquery-weui.min.js"></script>
+
+</head>
+<body class="bg-grey" ontouchstart>
+	<header class="nav-top">
+		<a href="javascript:history.go(-1);" class="back-btn"></a>
+		<h1>滞纳金期专利</h1>
+	</header>
+	<div class="userpatent-box">
+		<ul class="orders-lists">
+			<li>
+				<div class="order-title">
+					<lable for="checkbox1"><input type="checkbox" class="checkbox" id="checkbox1">序号：01</lable><a href="javascript:" class="btn-cart"></a>
+				</div>
+				<a href="./detail.html">
+					<div class="order-content">
+						<p>专利号：201410701077.1</p>
+						<p><b>专利号：201310626179.7</b><b>申请日：2009年11月02日</b></p>
+						<p>专利名称：具有带翼套管和铣削导向装置的膝关节假体套件</p>
+						<p>专利权人：德普伊产品公司</p>
+						<p><span>专利年度：第5年度</span><span class="price">年费金额：<b>1500</b>元</span></p>
+						<p><span>截止日期：2017年05月26日</span></p>
+					</div>
+				</a>
+			</li>
+			<li>
+				<div class="order-title">
+					<lable for="checkbox1"><input type="checkbox" class="checkbox" id="checkbox1">序号：01</lable><a href="javascript:" class="btn-cart"></a>
+				</div>
+				<a href="./detail.html">
+					<div class="order-content">
+						<p>专利号：201410701077.1</p>
+						<p><b>专利号：201310626179.7</b><b>申请日：2009年11月02日</b></p>
+						<p>专利名称：具有带翼套管和铣削导向装置的膝关节假体套件</p>
+						<p>专利权人：德普伊产品公司</p>
+						<p><span>专利年度：第5年度</span><span class="price">年费金额：<b>1500</b>元</span></p>
+						<p><span>截止日期：2017年05月26日</span></p>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<div class="sum clearfix">
+			<div class="fl" style="width:20%">
+				<input type="checkbox" class="select-all" id="select-all"><label for="select-all">全选</label>
+			</div>
+			
+			<div class="fl" style="width:54%">
+				<p class="amount">待缴费专利件数：<b id="amount">0</b>件</p>
+				<p class="money">年费合计：￥<span id="money">0</span>元</p>
+			</div>
+			<div class="fr" style="width:26%">
+				<a class="settle-btn" id="settle-btn">批量缴费</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="weui-tabbar">
+		<a href="./index.html" class="weui-tabbar__item">
+			<div class="weui-tabbar__icon icon-home"></div>
+			<p class="weui-tabbar__label">首页</p>
+		</a>
+		<a href="./userpatent.html" class="weui-tabbar__item weui-bar__item--on">
+			<div class="weui-tabbar__icon icon-patent"></div>
+			<p class="weui-tabbar__label">我的专利</p>
+		</a>
+		<a href="./userorder.html" class="weui-tabbar__item ">
+			<div class="weui-tabbar__icon icon-bill"></div>
+			<p class="weui-tabbar__label">我的订单</p>
+		</a>
+		<a href="./useraccount.html" class="weui-tabbar__item ">
+			<div class="weui-tabbar__icon icon-me"></div>
+			<p class="weui-tabbar__label">我的账户</p>
+		</a>
+	</div>
+
+	<script>
+		$(function() {
+			FastClick.attach(document.body);
+
+			// 全选
+			$('#select-all').on('click', function() {
+				var self = $(this);
+				var amount = $('.checkbox').length;
+				var item = $('.price b');
+				var money = 0;
+				for (var i = item.length - 1; i >= 0; i--) {
+					money += parseInt($(item[i]).text());
+				}
+				if (self.prop('checked')) {
+					$('.checkbox').prop('checked',true);
+					$('#amount').text(amount);
+					$('#money').text(money);
+				}else{
+					$('.checkbox').prop('checked',false);
+					$('#amount').text(0);
+					$('#money').text(0);
+				}
+			});
+
+			// 单个选择
+			$('.checkbox').on('click', function() {
+				var self = $(this);
+				var amount = $('.checkbox:checked').length;
+				var item = $('.checkbox:checked');
+				var money = 0;
+				for (var i = item.length - 1; i >= 0; i--) {
+					money += parseInt($(item[i]).parents('li').data('price'));
+				}
+				$('#amount').text(amount);
+				$('#money').text(money);
+				var len = $('.checkbox').length;
+				if (amount!==len) {
+					$('#select-all').prop('checked', false);
+				}else{
+					$('#select-all').prop('checked', true);
+				}
+			});
+
+			// 批量结算
+			$('#settle-btn').on('click', function() {
+				if ($('.checkbox:checked').length===0) {
+					alert('没有选择任何内容');
+				}else{
+					// $.ajax({
+					// 	url: '',
+					// 	type: 'POST',
+					// 	dataType: 'json',
+					// 	data: {
+					// 		param1: 'value1'
+					// 	},
+					// })
+					// .done(function() {
+					// 	alert("批量添加成功");
+					// })
+					// .fail(function() {
+					// 	console.log("error");
+					// });
+				}
+			});
+
+			// 单个添加购物车
+			$('.btn-cart').on('click', function() {
+
+				// $.ajax({
+					// 	url: '',
+					// 	type: 'POST',
+					// 	dataType: 'json',
+					// 	data: {
+					// 		param1: 'value1'
+					// 	},
+					// })
+					// .done(function() {
+					// 	alert("添加购物车功能，请查看购物车");
+					// })
+					// .fail(function() {
+					// 	console.log("error");
+					// });
+			});
+
+		});
+	</script>
+</body>
+</html>

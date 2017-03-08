@@ -24,32 +24,55 @@
 <body class="bg-grey" ontouchstart>
 	<header class="nav-top">
 		<a href="javascript:history.go(-1);" class="back-btn"></a>
-		<h1>所有专利</h1>
-	</header>
+		<h1>已完成订单</h1>
+	</header>		
 	<div class="userpatent-box">
-		<ul class="p-category">
-			<li><a href="./userpatent_all.html"><i></i>所有专利<span>></span></a></li>
-			<li><a href="./userpatent_unpaid.html"><i></i>待缴费专利<span>></span></a></li>
-			<li><a href="./userpatent_paid.html"><i></i>已缴费专利<span>></span></a></li>
-			<li><a href="./userpatent_overdue.html"><i></i>滞纳金期专利<span>></span></a></li>
-			<li><a href="./userpatent_recovery.html"><i></i>恢复期专利<span>></span></a></li>
-			<li><a href="./userpatent_ineffective.html"><i></i>失效专利<span>></span></a></li>
+		<ul class="orders-lists">
+			<li>
+				<div class="order-title">
+					<div class="order-no">订单编号：NGJ170800100</div>
+					<div class="order-status status-finished"><i></i>已完成</div>
+				</div>
+				<div class="order-content">
+					<p>专利号：201310626179.7</p>
+					<p>专利名称：移动落纱机对接拨盘式锁定机构</p>
+					<p>缴费年度：2017年</p>
+					<p>年费金额：RMB 1200 元</p>
+					<p>滞纳金：无</p>
+					<p>付款日期：2016-01-12</p>
+				</div>
+			</li>
+			<li>
+				<div class="order-title">
+					<div class="order-no">订单编号：NGJ170800100</div>
+					<div class="order-status status-finished"><i></i>已完成</div>
+				</div>
+				<div class="order-content">
+					<p>专利号：201310626179.7</p>
+					<p>专利名称：移动落纱机对接拨盘式锁定机构</p>
+					<p>缴费年度：2017年</p>
+					<p>年费金额：RMB 1200 元</p>
+					<p>滞纳金：无</p>
+					<p>付款日期：2016-01-12</p>
+				</div>
+			</li>
 		</ul>
 	</div>
+	
 	<div class="weui-tabbar">
 		<a href="./index.html" class="weui-tabbar__item">
 			<div class="weui-tabbar__icon icon-home"></div>
 			<p class="weui-tabbar__label">首页</p>
 		</a>
-		<a href="./userpatent.html" class="weui-tabbar__item weui-bar__item--on">
+		<a href="./userpatent.html" class="weui-tabbar__item">
 			<div class="weui-tabbar__icon icon-patent"></div>
 			<p class="weui-tabbar__label">我的专利</p>
 		</a>
-		<a href="./userorder.html" class="weui-tabbar__item ">
+		<a href="./userorder.html" class="weui-tabbar__item weui-bar__item--on">
 			<div class="weui-tabbar__icon icon-bill"></div>
 			<p class="weui-tabbar__label">我的订单</p>
 		</a>
-		<a href="./useraccount.html" class="weui-tabbar__item ">
+		<a href="./useraccount.html" class="weui-tabbar__item">
 			<div class="weui-tabbar__icon icon-me"></div>
 			<p class="weui-tabbar__label">我的账户</p>
 		</a>
@@ -58,6 +81,36 @@
 	<script>
 		$(function() {
 			FastClick.attach(document.body);
+			// 申请支付
+			$('.btn-pay').on('click', function() {
+				// $.ajax({
+				// 	url: '',
+				// 	type: 'POST',
+				// 	dataType: 'json',
+				// 	data: {
+				// 		param1: 'value1'
+				// 	},
+				// 	success:function(data) {
+
+				// 	}
+				// });
+			});
+
+			// 取消订单
+			$('.btn-cancle').on('click', function() {
+				// $.ajax({
+				// 	url: '',
+				// 	type: 'POST',
+				// 	dataType: 'json',
+				// 	data: {
+				// 		param1: 'value1'
+				// 	},
+				// 	success:function(data) {
+
+				// 	}
+				// });
+			});
+
 		});
 	</script>
 </body>
