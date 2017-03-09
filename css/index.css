@@ -382,16 +382,21 @@ ul,ol,li{
 	display: block;
 	box-sizing: border-box;
 	float: left;
-	width:45%;
-	padding:0.5rem;
-	height:2rem;
+	width:30%;
 	margin:0.5rem 0.25rem;
+	height:2rem;
+	line-height: 2rem;
 	color:#fff;
-	background-color: #00a0fc;
+	background: #00a0fc;
 	text-align: center;
+	font-size: 0.7rem;
+	border-radius: 1rem;
 }
-.btns-box .disabled-btn{
-	background-color: #666;
+.btns-box .view-his-btn{
+	background:#57778a;
+}
+.btns-box .prev-fee-btn{
+	background: #5ed65c;
 }
 
 .info-item>span{
@@ -410,7 +415,7 @@ ul,ol,li{
 	color:#787a7c;
 	background-color: #fff;
 	border:1px solid #a8a9ab;
-	border-radius:3px;
+	border-radius:0.75rem;
 }
 .info-item>button.active{
 	color: #fff;
@@ -993,9 +998,14 @@ ul.o-cate li:nth-child(5) a i{
 	color: #fff;
 	background: #00b9ff;
 	font-size: 0.9rem;
+	border-radius: 1rem;
 }
 .price>b{
 	font-weight: normal;
+	color:#e5004f;
 }
 
-
+.p-year{
+	color:#e5004f;
+	font-style: normal;
+}

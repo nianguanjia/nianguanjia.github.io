@@ -21,44 +21,37 @@
 	<script src="js/jquery-weui.min.js"></script>
 
 </head>
-<body class="bg-grey" ontouchstart>
+<body ontouchstart>
 	<header class="nav-top">
 		<a href="javascript:history.go(-1);" class="back-btn"></a>
-		<h1>失效专利</h1>
-	</header>
+		<h1>历史缴费信息</h1>
+	</header>		
 	<div class="userpatent-box">
 		<ul class="orders-lists">
-			<li>
+			<li data-price="900">
 				<div class="order-title">
-					<div class="order-no">专利号：201310626179.7</div>
+					<div>专利号：201510074276.9</div>
 				</div>
-				<a href="./detail.html">
-					<div class="order-content">
-						<p><b>专利号：201310626179.7</b><b>申请日：2009年11月02日</b></p>
-						<p>专利名称：具有带翼套管和铣削导向装置的膝关节假体套件</p>
-						<p>专利权人：德普伊产品公司</p>
-						<p><span>专利年度：第5年度</span><span>年费金额：1500元</span></p>
-						<p><span>缴费日期：2017年05月26日</span></p>
-					</div>
-				</a>
+				<div class="order-content">
+					<p><span>专利年度：第3年度</span><span>已缴金额：900元</span></p>
+					<p><span>缴费日期: 2016年12月09日</span><span>票据号: 60915958</span></p>
+					<p>缴费人：淮安市科翔专利商标事务所</p>
+				</div>
 			</li>
-			<li>
+			<li data-price="900">
 				<div class="order-title">
-					<div class="order-no">专利号：201310626179.7</div>
+					<div>专利号：201510074276.9</div>
 				</div>
-				<a href="./detail.html">
-					<div class="order-content">
-						<p><b>专利号：201310626179.7</b><b>申请日：2009年11月02日</b></p>
-						<p>专利名称：具有带翼套管和铣削导向装置的膝关节假体套件</p>
-						<p>专利权人：德普伊产品公司</p>
-						<p><span>专利年度：第5年度</span><span>年费金额：1500元</span></p>
-						<p><span>缴费日期：2017年05月26日</span></p>
-					</div>
-				</a>
+				<div class="order-content">
+					<p><span>专利年度：第4年度</span><span>已缴金额：900元</span></p>
+					<p><span>缴费日期: 2016年12月09日</span><span>票据号: 60915958</span></p>
+					<p>缴费人：淮安市科翔专利商标事务所</p>
+				</div>
 			</li>
 		</ul>
 	</div>
 	
+
 	<div class="weui-tabbar">
 		<a href="./index.html" class="weui-tabbar__item">
 			<div class="weui-tabbar__icon icon-home"></div>
@@ -77,10 +70,53 @@
 			<p class="weui-tabbar__label">我的账户</p>
 		</a>
 	</div>
-
 	<script>
 		$(function() {
 			FastClick.attach(document.body);
+
+			// 全选
+			$('#select-all').on('click', function() {
+				var self = $(this);
+				if (self.prop('checked')) {
+					$('.checkbox').prop('checked',true);
+				}else{
+					$('.checkbox').prop('checked',false);
+				}
+			});
+
+
+			// 单个选择
+			$('.checkbox').on('click', function() {
+				var self = $(this);
+				var amount = $('.checkbox:checked').length;
+				var len = $('.checkbox').length;
+				if (amount!==len) {
+					$('#select-all').prop('checked', false);
+				}else{
+					$('#select-all').prop('checked', true);
+				}
+			});
+
+
+			// 添加购物车
+			$('#add-cart-btn').on('click', function() {
+
+				// $.ajax({
+					// 	url: '',
+					// 	type: 'POST',
+					// 	dataType: 'json',
+					// 	data: {
+					// 		param1: 'value1'
+					// 	},
+					// })
+					// .done(function() {
+					// 	alert("添加购物车功能，请到“我的购物车”结算!");
+					// })
+					// .fail(function() {
+					// 	console.log("error");
+					// });
+				
+			});
 		});
 	</script>
 </body>

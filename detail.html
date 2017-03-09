@@ -74,13 +74,15 @@
 			</div>
 			
 			<div class="btns-box">
+			
 				<!-- 如果是待缴费状态的-->
-				<a class="add-cart-btn">添加到购物车</a>
+				<a class="add-cart-btn" id="add-cart-btn">添加到购物车</a>
 				<!-- /end -->
 
-				<a class="advance-fee-btn">预交年费</a>
-				<a class="disabled-btn">暂时不能缴费</a>
-				<a class="view-his-btn">历史缴费信息查看</a>
+				<a class="prev-fee-btn" href="./prevfeelist.html">预交年费</a>
+
+
+				<a class="view-his-btn" href="./feehis.html">历史缴费信息</a>
 			</div>
 		</div>
 
@@ -124,6 +126,7 @@
 		$(function() {
 			FastClick.attach(document.body);
 
+			// 变更状态
 			$('.status').on('click', function(event) {
 				event.stopPropagation();
 				var self = $(this);
@@ -191,6 +194,26 @@
 
 					
 				}
+			});
+
+
+			// 添加到购物车
+			$('#add-cart-btn').on('click', function() {
+				// $.ajax({
+					// 	url: '',
+					// 	type: 'POST',
+					// 	dataType: 'json',
+					// 	data: {
+					// 		param1: 'value1'
+					// 	},
+					// })
+					// .done(function() {
+					// 	alert("添加成功，请到“我的购物车”结算!");
+					// })
+					// .fail(function() {
+					// 	console.log("error");
+					// });
+				
 			});
 		});
 	</script>
