@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>年管加，自助专利管理和专利年费缴纳云平台！</title>
+    <meta name="keywords" content="年管加，自助专利管理和专利年费缴纳云平台！" />
+    <meta name="description" content="年管加，自助专利管理和专利年费缴纳云平台！" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true">
+    <link rel="stylesheet" href="css/weui.min.css">
+    <link rel="stylesheet" href="css/jquery-weui.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/fastclick.min.js"></script>
+    <script src="js/jquery-weui.min.js"></script>
+
+</head>
+<body ontouchstart>
+    <header class="nav-top">
+        <a href="javascript:history.go(-1);" class="back-btn"></a>
+        <h1>登录</h1>
+    </header>       
+    <div class="content">
+        <div class="input-box">
+            <label for="userName" class="input-title">用户名：</label>
+            <input type="tel" id="userName" placeholder="请输入手机号码或邮箱" value="">
+        </div>
+        <div class="input-box">
+            <label for="userPwd" class="input-title">密码：</label>
+            <input type="password" id="userPwd" placeholder="请输入密码">
+        </div>
+        <a class="confirm-btn" onclick="login()">登录</a>
+        <div class="reg-login"><a href="./findpwd.html" class="forgotpwd">忘记密码？</a>还没有账号？<a href="./register.html">立即注册</a></div>
+    </div>
+    
+
+    <div class="weui-tabbar">
+        <a href="./index.html" class="weui-tabbar__item weui-bar__item--on">
+            <div class="weui-tabbar__icon icon-home"></div>
+            <p class="weui-tabbar__label">首页</p>
+        </a>
+        <a href="./userpatent.html" class="weui-tabbar__item ">
+            <div class="weui-tabbar__icon icon-patent"></div>
+            <p class="weui-tabbar__label">我的专利</p>
+        </a>
+        <a href="./userorder.html" class="weui-tabbar__item ">
+            <div class="weui-tabbar__icon icon-bill"></div>
+            <p class="weui-tabbar__label">我的订单</p>
+        </a>
+        <a href="./useraccount.html" class="weui-tabbar__item ">
+            <div class="weui-tabbar__icon icon-me"></div>
+            <p class="weui-tabbar__label">我的账户</p>
+        </a>
+    </div>
+    <script>
+        $(function() {
+            FastClick.attach(document.body);
+        });
+    </script>
+</body>
+</html>

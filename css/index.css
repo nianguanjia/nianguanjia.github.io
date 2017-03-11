@@ -2,6 +2,9 @@ body, html {
 	height: 100%;
 	-webkit-tap-highlight-color: transparent;
 }
+body{
+	background: #f2f4f8;
+}
 button{
 	outline: none;
 	border: none;
@@ -433,24 +436,24 @@ ul,ol,li{
 	 z-index: 950;
 }
 .m-popup,.m-popup-mask {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    
-    background: rgba(0,0,0,.25)
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	
+	background: rgba(0,0,0,.25)
 }
 
 .m-popup-inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300px;
-    height: 200px;
-    margin-left: -150px;
-    margin-top: -100px;
-    z-index: 1000;
-    background-color: #fff
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	height: 200px;
+	margin-left: -150px;
+	margin-top: -100px;
+	z-index: 1000;
+	background-color: #fff
 }
 .transfer-popup .m-popup-inner{
 	box-sizing: border-box;
@@ -529,7 +532,11 @@ ul,ol,li{
 	color:#fff;
 	background-color: #00b9ff;
 }
-
+.user-cart .cart-amount{
+	color:#f30c06;
+	font-size:18px;
+	margin-left: 5px;
+}
 .more-info {
 	box-sizing: border-box;
 	width:100%;
@@ -656,7 +663,6 @@ ul,ol,li{
 
 /*bind account*/
 .bindacc-container{
-	/*padding-top:1.5rem;*/
 	background-color: #f2f4f8;
 }
 .bindacc-container li{
@@ -666,9 +672,6 @@ ul,ol,li{
 .bindacc-container li span,
 .bindacc-container li .input-title{
 	height: 2.5rem;
-}
-.bindacc-container .save-btn{
-	/*margin-top: 2rem;*/
 }
 .bindacc-container .tip{
 	padding:10px;
@@ -743,7 +746,7 @@ ul,ol,li{
 	float: right;
 }
 .order-status i{
-    display: inline-block;
+	display: inline-block;
 	width:0.8rem;
 	height:0.8rem;
 	vertical-align: middle;
@@ -755,7 +758,7 @@ ul,ol,li{
 	color: #f43530;
 }
 .status-unpaid i {
-    background: url(../images/icon-o-unpaid.png)center center no-repeat;
+	background: url(../images/icon-o-unpaid.png)center center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
@@ -853,6 +856,7 @@ ul.o-cate li:nth-child(5) a i{
 .userpatent-box{
 	padding-top: 2.2rem;
 	padding-bottom: 55px;
+	background: #f2f4f8;
 }
 .p-category li a{
 	box-sizing: border-box;
@@ -1008,4 +1012,104 @@ ul.o-cate li:nth-child(5) a i{
 .p-year{
 	color:#e5004f;
 	font-style: normal;
+}
+
+
+
+/*register*/
+.input-box{
+	line-height: 2.5rem;
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+}
+.input-box input{
+	display: inline-block;
+	height: 1.4rem;
+	width: 62.5%;
+	vertical-align: middle;
+	border: none;
+	font-size: 12px;
+	text-indent: 1em;
+	line-height: 1.8rem;
+}
+.input-box .input-title {
+	display: inline-block;
+	height: 2.5rem;
+	width: 31.25%;
+	min-width: 5rem;
+	font-size: 0.75rem;
+	vertical-align: middle;
+	color: #575757;
+	text-indent: 10px;
+}
+.input-box .smscode{
+	display: inline-block;
+	width: 32%;
+}
+.input-box .send-code {
+	float: right;
+	width: 90px;
+	height: 1.8rem;
+	line-height: 1.8rem;
+	margin-top: 0.35rem;
+	margin-right: 0.6rem;
+	color: #fff;
+	background-color: #00b9ff;
+	text-align: center;
+}
+.input-box .send-code.disabled{
+	background: #ccc;
+}
+.input-box  input[type=radio],
+.input-box  input[type=checkbox]{
+	width:16px;
+	outline: none;
+}
+.input-box .raido-title {
+	font-size: 12px;
+	display: inline-block;
+	margin-right: 0.5rem;
+	width: 90px;
+}
+.fwtk-box label{
+	padding-left:15%;
+	color:#575757;
+	font-size: 12px;
+}
+.fwtk-box label .fwtk{
+	margin-right: 10px;
+}
+.fwtk-box label a{
+	color:#575757;
+	font-size: 12px;
+}
+
+.confirm-btn{
+	display: block;
+	width: 85%;
+	height: 2.2rem;
+	margin: 0.6rem auto;
+	line-height: 2.4rem;
+	color: #fff;
+	background-color: #00b9ff;
+	font-size: 0.9rem;
+	text-align: center;
+	border-radius: 4px;
+}
+.reg-login,
+.reg-login a{
+	height:1.5rem;
+	line-height: 1.5rem;
+	color: #575757;
+	font-size: 12px;
+	text-align: center;
+
+}
+.reg-login a{
+	color:#ff8686;
+}
+.reg-login  .forgotpwd{
+	display: inline-block;
+	width:40%;
+	text-align: left;
 }

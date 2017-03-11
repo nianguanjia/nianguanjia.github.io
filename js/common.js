@@ -38,24 +38,24 @@ function checkMobile(str) {
 
 function checkexist(account,callback,account,acctype,msg){
 	// $.ajax({
-	// 	// url:''
-	// 	type : 'POST',
-	// 	dataType:'json',
-	// 	data : {
-	// 		data:account
-	// 	},
-	// 	success : function(data) {
-	// 		var resultdata = data;
-	// 		if (resultdata.code == 0) {
-	// 			alert("账号已存在");
-	// 			return;
-	// 		} else if (resultdata.code == 202) {
-	// 			callback(account,acctype,'',msg);
-	// 		} else {
-	// 			alert("账号输入有误，请重新输入");
-	// 		}
-	// 	}
-	// });	
+	//  // url:''
+	//  type : 'POST',
+	//  dataType:'json',
+	//  data : {
+	//      data:account
+	//  },
+	//  success : function(data) {
+	//      var resultdata = data;
+	//      if (resultdata.code == 0) {
+	//          alert("账号已存在");
+	//          return;
+	//      } else if (resultdata.code == 202) {
+	//          callback(account,acctype,'',msg);
+	//      } else {
+	//          alert("账号输入有误，请重新输入");
+	//      }
+	//  }
+	// });  
 }
 //判断数组是否有重复
 function isRepeat(arr) {
@@ -147,53 +147,53 @@ function update() {
 	var msgtype = $("input[name='msgtype']:checked").val();
 	
 	// $.ajax({
-	// 	// url: '',
-	// 	type: 'POST',
-	// 	dataType:'json',
-	// 	data: {
-	// 		userName: userName,
-	// 		userType: userType,
-	// 		patentName: patentName,
-	// 		contactName: contactName,
-	// 		contactMobile: contactMobile,
-	// 		contactEmail:contactEmail,
-	// 		emgContactName: emgContactName,
-	// 		emgContactMobile: emgContactMobile,
-	// 		msgtype: msgtype,
-	// 		city:city,
-	// 		address: address,
-	// 		msgtype:msgtype
-	// 	},
-	// 	success: function(data) {
-	// 		// to do
-	// 		window.location.reload();
-	// 	}
+	//  // url: '',
+	//  type: 'POST',
+	//  dataType:'json',
+	//  data: {
+	//      userName: userName,
+	//      userType: userType,
+	//      patentName: patentName,
+	//      contactName: contactName,
+	//      contactMobile: contactMobile,
+	//      contactEmail:contactEmail,
+	//      emgContactName: emgContactName,
+	//      emgContactMobile: emgContactMobile,
+	//      msgtype: msgtype,
+	//      city:city,
+	//      address: address,
+	//      msgtype:msgtype
+	//  },
+	//  success: function(data) {
+	//      // to do
+	//      window.location.reload();
+	//  }
 	// });
 }
 
 
 function bind(account,acctype,smscode,msg){
 	// $.ajax({
-	// 	// url:''
-	// 	type : 'POST',
-	// 	dataType:'json',
-	// 	data: {
-	// 		account: account,
-	// 		type:acctype,
-	// 		smscode:smscode
-	// 	},
-	// 	success : function(data) {
-	// 		var resultdata = data;
-	// 		if (resultdata.code == Strings.nosession) {
-	// 			nosession();
-	// 			return false;
-	// 		}
-	// 		if (resultdata.code == 0) {
-	// 			alert(msg);
-	// 		} else {
-	// 			alert("绑定失败");
-	// 		}
-	// 	}
+	//  // url:''
+	//  type : 'POST',
+	//  dataType:'json',
+	//  data: {
+	//      account: account,
+	//      type:acctype,
+	//      smscode:smscode
+	//  },
+	//  success : function(data) {
+	//      var resultdata = data;
+	//      if (resultdata.code == Strings.nosession) {
+	//          nosession();
+	//          return false;
+	//      }
+	//      if (resultdata.code == 0) {
+	//          alert(msg);
+	//      } else {
+	//          alert("绑定失败");
+	//      }
+	//  }
 	// });
 }
 
@@ -255,25 +255,25 @@ function sendsmscode(){
 	}
 	//产生验证码
 	// $.ajax({
-	// 	// url: '',
-	// 	type : 'POST',
-	// 	dataType:'json',
-	// 	data : {
-	// 		mobile: phone
-	// 	},
-	// 	success : function(data) {
-	// 		var resultdata = data;
-	// 		if (resultdata.code == 0) {
-	// 			myalert("验证码已发送");
-	// 			curCount=120;
-	// 			// 设置button效果，开始计时
-	// 			$("#sendCodemobile").attr("disabled", "disabled");
-	// 			$("#sendCodemobile").text("请在" + curCount + "秒内输入验证码");
-	// 			InterValObj = window.setInterval(SetRemainTime, 1000); // 启动计时器，1秒执行一次
-	// 		} else {
-	// 			alert("验证码发送失败");
-	// 		}
-	// 	}
+	//  // url: '',
+	//  type : 'POST',
+	//  dataType:'json',
+	//  data : {
+	//      mobile: phone
+	//  },
+	//  success : function(data) {
+	//      var resultdata = data;
+	//      if (resultdata.code == 0) {
+	//          myalert("验证码已发送");
+	//          curCount=120;
+	//          // 设置button效果，开始计时
+	//          $("#sendCodemobile").attr("disabled", "disabled");
+	//          $("#sendCodemobile").text("请在" + curCount + "秒内输入验证码");
+	//          InterValObj = window.setInterval(SetRemainTime, 1000); // 启动计时器，1秒执行一次
+	//      } else {
+	//          alert("验证码发送失败");
+	//      }
+	//  }
 	// });
 }
 
@@ -294,15 +294,15 @@ function SetRemainTime() {
 function sendCodemobile(){
 	var phone=$("#mobile").val();
 	if (isEmpty(phone) ) {
-        alert("请输入手机号码");
-        $("#mobile").focus();
-        return;
-    }
+		alert("请输入手机号码");
+		$("#mobile").focus();
+		return;
+	}
 	if (!checkMobile(phone)) {
-        alert("手机号码格式不正确");
-        $("#mobile").focus();
-        return;
-    }
+		alert("手机号码格式不正确");
+		$("#mobile").focus();
+		return;
+	}
 	checkexist(phone,sendsmscode);
 }
 
@@ -331,30 +331,30 @@ function modpwd() {
 	}
 
 	// $.ajax({
-	// 	// url:'',
-	// 	type : 'POST',
-	// 	dataType : "json",
-	// 	data : {
-	// 		oldPwd: oldpwd,
-	// 		newPwd: newpwd
-	// 	},
-	// 	success : function(data) {
-	// 		var resultdata = data;
-	// 		if (resultdata.code == Strings.nosession) {
-	// 			nosession();
-	// 			return false;
-	// 		}
-	// 		if (resultdata.code == 0) {
-	// 			alert("密码修改成功");
-	// 			window.location.href = '/useraccount.html';
-	// 		} else {
-	// 			if (resultdata.code == 204) {
-	// 				alert("密码不正确");
-	// 			} else {
-	// 				alert("密码修改失败");
-	// 			}
-	// 		}
-	// 	}
+	//  // url:'',
+	//  type : 'POST',
+	//  dataType : "json",
+	//  data : {
+	//      oldPwd: oldpwd,
+	//      newPwd: newpwd
+	//  },
+	//  success : function(data) {
+	//      var resultdata = data;
+	//      if (resultdata.code == Strings.nosession) {
+	//          nosession();
+	//          return false;
+	//      }
+	//      if (resultdata.code == 0) {
+	//          alert("密码修改成功");
+	//          window.location.href = '/useraccount.html';
+	//      } else {
+	//          if (resultdata.code == 204) {
+	//              alert("密码不正确");
+	//          } else {
+	//              alert("密码修改失败");
+	//          }
+	//      }
+	//  }
 	// });
 }
 
@@ -385,29 +385,295 @@ function bindholder() {
 	$.toast("正在自动为您添加关注", 3000);
 
 	// $.ajax({
-	// 	// url:''
-	// 	type : 'POST',
-	// 	data : {
-	// 		obligee1: obligee1,
-	// 		obligee2: obligee2,
-	// 		obligee3: obligee3,
-	// 		obligee4: obligee4,
-	// 		obligee5: obligee5
-	// 	},
-	// 	success : function(data) {
-	// 		var resultdata = data;
-	// 		if (resultdata.code == 0) {
-	// 			alert("绑定成功，自动关注专利"+resultdata.retData+"条，请于次日登录查看相关专利的最新状态");
-	// 			setTimeout(function(){
-	// 				window.location.href = '/.';
-	// 			},2000);
-	// 		} else if (211 == resultdata.code) {
-	// 			alert("专利权人不存在或未找到对应专利信息。");
-	// 		} else if (220 == resultdata.code) {
-	// 			alert("请检查需要绑定的专利权人。");
-	// 		} else {
-	// 			alert("绑定失败");
-	// 		}
-	// 	}
+	//  // url:''
+	//  type : 'POST',
+	//  data : {
+	//      obligee1: obligee1,
+	//      obligee2: obligee2,
+	//      obligee3: obligee3,
+	//      obligee4: obligee4,
+	//      obligee5: obligee5
+	//  },
+	//  success : function(data) {
+	//      var resultdata = data;
+	//      if (resultdata.code == 0) {
+	//          alert("绑定成功，自动关注专利"+resultdata.retData+"条，请于次日登录查看相关专利的最新状态");
+	//          setTimeout(function(){
+	//              window.location.href = '/.';
+	//          },2000);
+	//      } else if (211 == resultdata.code) {
+	//          alert("专利权人不存在或未找到对应专利信息。");
+	//      } else if (220 == resultdata.code) {
+	//          alert("请检查需要绑定的专利权人。");
+	//      } else {
+	//          alert("绑定失败");
+	//      }
+	//  }
 	// });
 }
+
+
+function sendEmail() {
+	var account = $("#forgetMobile").val();
+
+	// $.ajax({
+	//  type: 'POST',
+	//  dataType: 'json',
+	//  url: '',
+	//  data: {
+	//      "account": account
+	//  },
+	//  success : function(data) {
+	//  }
+	// });
+}
+
+
+// find password
+function forgetPwdStep1() {
+	var type; 
+	var userName = $('#forgetMobile');
+	var userNameVal = userName.val();
+	if (userNameVal ===""|| (!checkEmail(userNameVal) && !checkMobile(userNameVal))) {
+		alert('请输入正确的手机号码或邮箱');
+		userName.focus();
+		return;
+	}else if(checkEmail(userNameVal)){
+		type = 1; //1为邮箱
+	}else if(checkMobile(userNameVal)){
+		type = 0; //0为手机
+	}
+
+	// $.ajax({
+	//  type : 'POST',
+	//  dataType:'json',
+	//  url : '',
+	//  data : {
+	//      "userNameVal": userNameVal
+	//  }
+	//  success : function(data) {
+	//      if (data.code == 0) {
+				$('#step1').hide();
+				if (type == 0) {
+					$('#step2').show();
+				}
+				if (type == 1) {
+					alert('系统已将密码重置激活链接发送至该邮箱，请登录查看！');
+					sendEmail();
+				}
+			// } else if (data.code == 202) {
+			//  alert('账号不存在,请重新输入');   
+			// } else {
+			//  alert("账号输入有误，请重新输入");
+			// }
+		// }
+	// });
+}
+
+var timer;
+function sendCode(id){
+	var obj = $('#sendCode'+ id );
+	
+	var mobile = $('#'+id).val();
+	if (mobile=="" || !checkMobile(mobile)) {
+		alert("手机号码不正确");
+		return;
+	}
+	obj.attr("disabled", 'disabled').addClass('disabled')
+	var count = 60;
+	 timer = setInterval(function() {
+		if (count>0) {
+			count--;
+			obj.text(count + "秒后再试");
+		}else{
+			clearInterval(timer);
+			obj.removeAttr("disabled").removeClass('disabled').text("验证码");
+		}
+		
+	},1000);
+	// $.ajax({
+	//  type: 'POST',
+	//  dataType: 'json',
+	//  url: '',
+	//  data: {
+	//      "mobile": mobile
+	//  },
+	//  success: function(data) {
+	//      if (data.code == 0) {
+			//  alert("验证码已发送");
+			// } else {
+			//  alert("验证码发送失败");
+			// }
+	//  }
+	// });
+}
+
+
+function forgetPwdStep2() {
+	var vcode = $('#forgetVcode').val();
+	if (vcode=='') {
+		alert('请输入验证码');
+		return;
+	}
+	// 校验验证码
+	// $.ajax({
+	//  type: 'POST',
+	//  dataType: 'json',
+	//  url: '',
+	//  data: {
+	//      "vcode": vcode
+	//  }
+	//  success: function(data) {
+	//      if (data.code == 0) {
+				$("#step2").hide();
+				clearInterval(timer);
+				$('#sendCodeforgetMobile').removeAttr("disabled").removeClass('disabled').text("验证码");
+				$("#step3").show();
+	//      } else {
+	//          alert("校验码输入错误");
+	//      }
+	//  }
+	// });
+}
+
+function forgetPwdStep3() {
+	var resetPwd1 = $("#resetPwd1").val();
+	var resetPwd2 = $("#resetPwd2").val();
+	var account = $("#forgetMobile").val();
+	if (resetPwd1 == "") {
+		alert("输入新密码");
+		return;
+	}
+	if (resetPwd1 == "") {
+		alert("请再次输入密码");
+		return;
+	}
+	if (resetPwd1 != resetPwd2) {
+		alert("两次输入密码不一致");
+		return;
+	}
+	
+	// $.ajax({
+	//  type: 'POST',
+	//  dataType: 'json',
+	//  url: '',
+	//  data: {
+	//      "newPwd": resetPwd2,
+	//      "account": account
+	//  },
+	//  success : function(data) {
+	//      if (data.code == 0) {
+				alert("密码重置成功");
+	//      } else {
+	//          alert("密码重置失败");
+	//      }
+	//  }
+	// });
+}
+
+// login 
+function login() {
+	var userName = $("#userName").val();
+	if (userName == "") {
+		alert("请输入手机或邮箱");
+		$("#userName").focus();
+		return;
+	}
+	else if ( !checkEmail(userName) && !checkMobile(userName)) {
+		alert("手机或邮箱格式非法");
+		$("#userName").focus();
+		return;
+	}
+	var userPassword = $("#userPwd").val();
+	if (userPassword == "") {
+		alert("请输入密码");
+		$("#userPwd").focus();
+		return;
+	}
+
+// 	$.ajax({
+// 		type: 'POST',
+// 		dataType: 'json',
+// 		url: '',
+// 		data: {
+// 		"account": userName,
+// 		"passwd": userPassword
+// 		},
+// 		success : function(data) {
+
+// 		}
+// 	});
+}
+
+
+// register
+function reg() {
+	var mobile = $("#mobile").val();
+	var vcode = $("#vcode").val();
+	var pwd = $("#passwordMobile").val();
+	var pwd2 = $("#passwordMobile2").val();
+	var utype = $("input[name='utype']:checked").val();
+
+	if (mobile == "") {
+		alert("请输入手机号码");
+		$("#mobile").focus();
+		return;
+	}else if(!checkMobile(mobile)){
+		alert("手机号码格式非法");
+		return;
+	}
+
+	if (vcode == "") {
+		alert("请输入验证码");
+		$("#vcode").focus();
+		return;
+	}
+
+	if (pwd =="") {
+		alert("请输入密码");
+		$("#passwordMobile").focus();
+		return;
+	}
+	if (pwd.length < 6 || pwd.length > 16) {
+		alert("密码长度要求在6-16位");
+		$("#passwordMobile").focus();
+		return;
+	}
+	if (pwd2 =="") {
+		alert("请再次输入密码");
+		$("#passwordMobile2").focus();
+		return;
+	}
+	if (pwd2.length < 6 || pwd2.length > 16) {
+		alert("密码长度要求在6-16位");
+		$("#passwordMobile2").focus();
+		return;
+	}
+	if(pwd !== pwd2){
+		alert("两次输入的密码不一致");
+		$("#passwordMobile2").focus();
+		return;
+	}
+
+	if ($("#fwtk").is(':checked') == false) {
+		alert("请阅读服务条款，并同意该条款");
+		return;
+	}
+
+
+	// $.ajax({
+	// 	type: 'POST',
+	// 	dataType: 'json',
+	// 	url: '', 
+	// 	data : {
+	// 		"mobile":mobile,
+	// 		"password":pwd,
+	// 		"vcode":vcode, 
+	// 		"utype": utype
+	// 	},
+	// 	success : function(data) {
+	// });
+
+}
+
+
