@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>年管加，自助专利管理和专利年费缴纳云平台！</title>
+	<meta name="keywords" content="年管加，自助专利管理和专利年费缴纳云平台！" />
+	<meta name="description" content="年管加，自助专利管理和专利年费缴纳云平台！" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="full-screen" content="yes" />
+	<meta name="x5-fullscreen" content="true">
+	<link rel="stylesheet" href="css/weui.min.css">
+	<link rel="stylesheet" href="css/jquery-weui.min.css">
+	<link rel="stylesheet" href="css/index.css">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/fastclick.min.js"></script>
+	<script src="js/jquery-weui.min.js"></script>
+	<script src="js/city-picker.min.js"></script>
+
+</head>
+<body class="bg-grey" ontouchstart>
+	<header class="nav-top">
+		<a href="javascript:history.go(-1);" class="back-btn"></a>
+		<h1>确认订单</h1>
+	</header>
+	<div class="userpatent-box confirm-box">
+		<ul class="orders-lists">
+			<li>
+				<div class="order-title">
+					<p>订单信息</p>
+				</div>
+				
+				<div class="order-content">
+				<ul class="confirm-order">
+					<li class="confirm-order-item" data-price="900" >
+						<p>专利号：201510283662.9</p>
+						<p>专利名称：一种压路机用振动冲击圆形钢轮</p>
+						<p><span>缴费年度：第3年度 </span><span>年费金额：900</span></p>
+						<p><span>滞纳金：0</span><span>恢复费用：0</span></p>
+					</li>
+					<li class="confirm-order-item" data-price="1200">
+						<p>专利号：201510283662.9</p>
+						<p>专利名称：一种压路机用振动冲击圆形钢轮</p>
+						<p><span>缴费年度：第3年度 </span><span>年费金额：1200</span></p>
+						<p><span>滞纳金：0</span><span>恢复费用：0</span></p>
+					</li>
+				</ul>
+					
+				</div>
+			</li>
+			<li>
+				<div class="order-title">
+					<p>快递方式</p>
+				</div>
+				<div class="order-content">
+					<label class="raido-title" for="EMS"><input type="radio" name="express" class="express" value="1" id="EMS" >EMS</label>
+					<label class="raido-title" for="SF"><input type="radio" name="express" class="express" value="2" id="SF" >顺丰速递</label>
+					<label class="raido-title" for="NO"><input type="radio" name="express" class="express" value="0" id="NO" checked="checked" >无需发票收据</label>
+					<div class="express-fee">
+						<p>快递费用：<span id="expFee">0</span><span class="exp-tip" id="exp-tip"></span></p>
+					</div>
+					<div class="express-fee" id="df-box" style="display: none">
+						<span>是否到付</span>
+						<label class="raido-title" for="dfy"><input type="radio" name="df" class="df"  value="1" id="dfy" >是</label>
+						<label class="raido-title" for="dfn"><input type="radio" name="df" class="df" value="0" id="dfn" checked="checked" >否</label>
+					</div>
+					
+				</div>
+			</li>
+			<li>
+				<div class="order-title">
+					<p>抬头类型</p>
+				</div>
+				<div class="order-content">
+					<label class="raido-title" for="invoiceType1"><input type="radio" name="invoiceType" value="1" class="invoiceType" id="invoiceType1" checked="checked">发票抬头</label>
+					<label class="raido-title" for="invoiceType2"><input type="radio" name="invoiceType" value="2" class="invoiceType"id="invoiceType2" >专利局官方收据抬头</label>
+					<div class="invoice-box" id="invoice-box1">
+						<label for="invoice1">抬头信息</label><input type="text"  id="invoice1" placeholder="请输入抬头信息">
+						<p class="tip">如需发票，请输入发票抬头全称，一张订单只能开具一张发票。</p>
+					</div>
+					<div class="invoice-box" id="invoice-box2" style="display: none">
+						<label for="invoice1">抬头信息</label><input type="text"  id="invoice2" placeholder="请输入抬头信息">
+						<p class="tip">如需官网收据，请输入专利局官方收据抬头并确认订单中专利均属同一专利权人。</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="order-title">
+					<p>寄送地址</p>
+				</div>
+				<div class="invoice-box addr-box">
+					<input type="text" id="city-picker" placeholder="请选择省市区" readonly="" data-code="110101" data-codes="110000,110000,110101">
+					<input type="text" id="address" placeholder="请输入详细地址">
+				</div>	
+			</li>
+			<li>
+				<div class="order-title">
+					<p>备注</p>
+				</div>
+				<div class="invoice-box addr-box">
+					<input type="text" placeholder="如有特殊说明，请填写">
+				</div>
+			</li>
+		</ul>
+		
+		<div class="sum clearfix">
+			<div class="fl">
+				<p class="money">￥<span id="totalFee">0</span>元</p>
+				<p >费用总计（含运费）</p>
+			</div>
+			<div class="fr" style="width:40%">
+				<a class="settle-btn" id="submit-order">提交</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="weui-tabbar">
+		<a href="./index.html" class="weui-tabbar__item">
+			<div class="weui-tabbar__icon icon-home"></div>
+			<p class="weui-tabbar__label">首页</p>
+		</a>
+		<a href="./userpatent.html" class="weui-tabbar__item weui-bar__item--on">
+			<div class="weui-tabbar__icon icon-patent"></div>
+			<p class="weui-tabbar__label">我的专利</p>
+		</a>
+		<a href="./userorder.html" class="weui-tabbar__item ">
+			<div class="weui-tabbar__icon icon-bill"></div>
+			<p class="weui-tabbar__label">我的订单</p>
+		</a>
+		<a href="./useraccount.html" class="weui-tabbar__item ">
+			<div class="weui-tabbar__icon icon-me"></div>
+			<p class="weui-tabbar__label">我的账户</p>
+		</a>
+	</div>
+
+	<script>
+		$(function() {
+			FastClick.attach(document.body);
+
+			// 是否到付
+			function isDaofu() {
+				var df = $('.df:checked').val();
+				console.log('df =' + df);
+				if (df == 1) {//到付
+					console.log("到付");
+					return true;
+				}else{
+					console.log("不到付");
+					return false;
+				}
+			}
+
+			// 是否广东省内
+			function isGuangdong() {
+				var citycode = $('#city-picker').attr('data-codes').split(',')[0];
+				console.log('citycode =' + citycode);
+				if (citycode === "440000") {
+					console.log("省内");
+					return true;
+				}else{
+					console.log("省外");
+					return false;
+				}
+			}
+
+			// 计算运费
+			function computeExpFee() {
+				var exp = $('.express:checked').val();
+				console.log('exp = '+ exp);
+				var expFee;
+
+				if (exp == 1){
+					console.log("EMS");
+					$('#exp-tip').text('省内12元，省外（国内）20元。');
+					if (isGuangdong()) {
+						expFee = 12;
+					}else{
+						expFee = 20;
+					}
+					if (isDaofu()) {
+						expFee = 0;
+						$('#dfy').prop('checked', true);
+					}else{
+						$('#dfn').prop('checked', true);
+					}
+					$('#expFee').text(expFee);
+					$('#df-box').show();
+					
+
+				}else if(exp == 2){
+					console.log("顺丰");
+					$('#exp-tip').text('省内13元，省外（国内）23元。');
+					if (isGuangdong()) {
+						expFee = 13;
+					}else{
+						expFee = 23;
+					}
+					if (isDaofu()) {
+						expFee = 0;
+						$('#dfy').prop('checked', true);
+					}else{
+						$('#dfn').prop('checked', true);
+					}
+					$('#expFee').text(expFee);
+					$('#df-box').show();
+				}else{
+					console.log("不寄发票");
+					$('#exp-tip').text('');
+					$('#expFee').text(0);
+					$('#df-box').hide();
+				}
+			}
+
+			// 计算总价
+			function computeTotalFee() {
+				var orderFee = 0;
+				var orderItem = $('.confirm-order-item');
+				for (var i = orderItem.length - 1; i >= 0; i--) {
+					orderFee += parseInt($(orderItem[i]).data('price'));
+				}
+				console.log('orderFee =' + orderFee);
+
+				var totalFee = orderFee + parseInt($('#expFee').text());
+				console.log('totalFee =' + totalFee);
+				
+				$('#totalFee').text(totalFee)
+
+			}
+
+			computeTotalFee();
+
+			// 选择快递方式
+			$('.express').on('click', function() {
+				computeExpFee();
+				computeTotalFee();
+			});
+			
+			// 选择是否到付
+			$('.df').on('click', function() {
+				computeExpFee();
+				computeTotalFee();
+			});
+
+			// 抬头类型切换
+			$('.invoiceType').on('click', function() {
+				var type= $(this).val();
+				if (type==1) {
+					$('#invoice-box1').show();
+					$('#invoice-box2').hide();
+				}else{
+					$('#invoice-box1').hide();
+					$('#invoice-box2').show();
+				}
+			});
+
+			// 选择城市
+			$("#city-picker").cityPicker({
+				onClose:function() {
+					computeExpFee();
+					computeTotalFee();
+				}
+			});
+
+			// 提交订单
+			$('#submit-order').on('click', function() {
+				// $.ajax({
+				// 	url: '',
+				// 	type: 'POST',
+				// 	dataType: 'json',
+				// 	data: {
+				// 		param1: 'value1'
+				// 	},
+				// 	success:function() {
+
+				// 	}
+				// });
+			});
+		});
+	</script>
+</body>
+</html>

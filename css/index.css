@@ -531,17 +531,26 @@ ul,ol,li{
 	border-radius: 0.9rem;
 	color:#fff;
 	background-color: #00b9ff;
+	position: relative;
 }
 .user-cart .cart-amount{
-	color:#f30c06;
-	font-size:18px;
-	margin-left: 5px;
+	position: absolute;
+	top:0;
+	right:0;
+	display: block;
+	height:20px;
+	width:20px;
+	line-height: 20px;
+	color:#fff;
+	font-size:12px;
+	background: #ff3732;
+	border-radius: 50%;
+	text-align: center;
 }
 .more-info {
 	box-sizing: border-box;
 	width:100%;
 	padding-top: 2rem;
-	/*padding:2.4rem 3% 0;*/
 }
 .more-info:after{
 	display: block;
@@ -848,6 +857,7 @@ ul.o-cate li:nth-child(5) a i{
 	background-size: cover;
 }
 
+
 /*user patent*/
 .userpatent-box .patent-status{
 	float: right;
@@ -961,6 +971,18 @@ ul.o-cate li:nth-child(5) a i{
 	color:red;
 }
 
+.btn-delete{
+	float: right;
+	display: block;
+	height:1rem;
+	width:1rem;
+	margin-top: 0.2rem;
+	margin-right: 0.5rem;
+	background: url(../images/icon-delete.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
 
 .sum{
 	padding:10px;
@@ -968,13 +990,13 @@ ul.o-cate li:nth-child(5) a i{
 }
 .sum label{
 	display: inline-block;
-	line-height: 3rem;
+	line-height: 2.4rem;
 }
 .sum .select-all{
 	margin-right: 5px;
 }
 .sum .fl{
-	height:3rem;
+	height:2.4rem;
 }
 .sum .fl .amount{
 	height:1.2rem;
@@ -987,22 +1009,22 @@ ul.o-cate li:nth-child(5) a i{
 	margin:0 6px;
 }
 .sum .fl .money{
-	height:1.5rem;
-	line-height: 1.5rem;
-	font-size: 0.7rem;
+	height:1.2rem;
+	line-height: 1.2rem;
+	font-size: 0.6rem;
 	color: #ee4e4e;
 }
 .settle-btn{
 	display: block;
-	height:2rem;
+	height:1.8rem;
 	width:100%;
-	line-height: 2rem;
-	margin-top: 0.5rem;
+	line-height: 1.8rem;
+	margin-top: 0.3rem;
 	text-align: center;
 	color: #fff;
 	background: #00b9ff;
-	font-size: 0.9rem;
-	border-radius: 1rem;
+	font-size: 0.7rem;
+	border-radius: 1.2rem;
 }
 .price>b{
 	font-weight: normal;
@@ -1014,8 +1036,75 @@ ul.o-cate li:nth-child(5) a i{
 	font-style: normal;
 }
 
+.warning{
+	line-height: 1.2rem;
+	font-size: 0.6rem;
+	color:red;
+	background-color: #fff;
+	text-indent: 2em;
+}
+/*confirm*/
+.confirm-box .raido-title{
+	display: inline-block;
+	padding:4px 10px;
+}
+.confirm-box .raido-title input{
+	margin-right: 6px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.express-fee{
+	margin:5px 0;
+}
+.exp-tip{
+	float: right;
+	font-size: 12px;
+}
+.invoice-box{
+	line-height: 1.5rem;
+	margin:10px 0 5px;
+}
+.invoice-box label{
+	display: inline-block;
+	width:70px;
+	height:1.5rem;
+	margin-bottom: 10px;
+	vertical-align: middle;
+}
+.invoice-box input{
+	display: inline-block;
+	width:62%;
+	height:1.4rem;
+	margin-bottom: 10px;
+    font-size: 12px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    text-indent: 1em;
+    vertical-align: middle;
 
-
+}
+.invoice-box .tip{
+	line-height: 1.2rem;
+    font-size: 12px;
+    background-color: #fff;
+    white-space:normal;
+}
+.invoice-box.addr-box input{
+	display: block;
+	width:90%;
+}
+.confirm-box .confirm-order li{
+	margin-bottom: 10px;
+	border-bottom: 1px dotted #eee;
+}
+.confirm-box .confirm-order li:last-child{
+	border:none;
+}
+.confirm-box .confirm-order li span{
+	display: inline-block;
+	width:50%;
+	vertical-align: middle;
+}
 /*register*/
 .input-box{
 	line-height: 2.5rem;
@@ -1112,4 +1201,130 @@ ul.o-cate li:nth-child(5) a i{
 	display: inline-block;
 	width:40%;
 	text-align: left;
+}
+
+
+/*faq*/
+.faq{
+	background: #f2f4f8;
+}
+.faq li{
+	box-sizing: border-box;
+	display: block;
+	line-height: 1.2rem;
+	font-size: 0.7rem;
+	color:#575757;
+	background: #fff;
+	padding:5px 12px;
+	margin-bottom: 10px;
+}
+.faq li p:first-child{
+	margin-bottom: 5px;
+	border-bottom: 1px dashed #eee;
+}
+
+/*notice*/
+.notice li{
+	box-sizing: border-box;
+	display: block;
+	line-height: 1.2rem;
+	font-size: 0.7rem;
+	color:#575757;
+	background: #fff;
+	padding:12px;
+	margin-bottom: 10px;
+}
+.notice li p{
+	margin-bottom: 8px;
+}
+.notice li h2{
+	line-height: 1.5rem;
+	font-size: 0.8rem;
+}
+
+/*contact*/
+.contact-box{
+	box-sizing: border-box;
+	display: block;
+	line-height: 1.8rem;
+	font-size: 0.8rem;
+	color:#575757;
+	background: #fff;
+	padding:12px;
+	margin-bottom: 10px;
+}
+.contact-box img{
+	display: block;
+	width:200px;
+	height:200px;
+	margin:10px auto;
+}
+
+/*comment*/
+.comment-box img{
+	display: block;
+	width:100%;
+	max-width: 768px;
+	margin:10px auto;
+}
+
+
+/*news*/
+.news-list li{
+	box-sizing: border-box;
+	display: block;
+	line-height: 1.2rem;
+	font-size: 0.65rem;
+	color:#575757;
+	background: #fff;
+	padding:12px;
+	margin-bottom: 10px;
+}
+.news-list li h2 a{
+	display: block;
+	line-height: 1.5rem;
+	color:#575757;
+	font-size: 0.8rem;
+	border-bottom: 1px dashed #eee;
+}
+.news-list li .pub-time{
+	float: right;
+	font-size: 12px;
+	color:#666;
+}
+.news-list li:after{
+	display: block;
+	content:"";
+	clear:both;
+}
+.news-detail {
+	box-sizing: border-box;
+	padding:12px;
+	margin-bottom: 10px;
+	
+	color:#575757;
+	background: #fff;
+}
+.news-detail h2 {
+	line-height: 1.5rem;
+	font-size: 0.75rem;
+}
+.news-detail p{
+	font-size: 0.65rem;
+	line-height: 1.2rem;
+}
+
+.fix-top{
+	box-sizing: border-box;
+	position: fixed;
+	top:2.2rem;
+	width:100%;
+	padding:0 10px;
+	font-size: 12px;
+	height:2.4rem;
+	font-size: 12px;
+	border-bottom: 1px solid #eee;
+}
+.has-fix-top{
+	padding-top: 4.6rem;
 }

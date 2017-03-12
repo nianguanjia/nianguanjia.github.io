@@ -26,7 +26,20 @@
 		<a href="javascript:history.go(-1);" class="back-btn"></a>
 		<h1>待缴费专利</h1>
 	</header>
-	<div class="userpatent-box">
+	<div class="sum clearfix fix-top">
+		<div class="fl" style="width:20%">
+			<input type="checkbox" class="select-all" id="select-all"><label for="select-all">全选</label>
+		</div>
+		
+		<div class="fl" style="width:54%">
+			<p class="amount">待缴费专利件数：<b id="amount">0</b>件</p>
+			<p class="money">年费合计：￥<span id="money">0</span>元</p>
+		</div>
+		<div class="fr" style="width:26%">
+			<a class="settle-btn" id="settle-btn">批量缴费</a>
+		</div>
+	</div>
+	<div class="userpatent-box has-fix-top">
 		<ul class="orders-lists">
 			<li data-price="1200">
 				<div class="order-title">
@@ -34,7 +47,8 @@
 				</div>
 				<a href="./detail.html">
 					<div class="order-content">
-						<p><b>专利号：201310626179.7</b><b>申请日：2009年11月02日</b></p>
+						<p>专利号：201310626179.7</p>
+						<p>申请日：2009年11月02日</p>
 						<p>专利名称：具有带翼套管和铣削导向装置的膝关节假体套件</p>
 						<p>专利权人：德普伊产品公司</p>
 						<p><span>专利年度：第5年度</span><span class="price">年费金额：<b>1200</b>元</span></p>
@@ -48,8 +62,36 @@
 				</div>
 				<a href="./detail.html">
 					<div class="order-content">
-						<p><b>专利号：201310626179.7</b><b>申请日：2009年11月02日</b></p>
-						<p>专利名称：具有带翼套管和铣削导向装置的膝关节假体套件</p>
+						<p>专利号：201310626179.7</p>
+						<p>申请日：2009年11月02日</p>
+						<p>专利权人：德普伊产品公司</p>
+						<p><span>专利年度：第5年度</span><span class="price">年费金额：<b>1500</b>元</span></p>
+						<p><span>截止日期：2017年05月26日</span><span class="countdown">倒计时：82天</span></p>
+					</div>
+				</a>
+			</li>
+			<li data-price="1500">
+				<div class="order-title">
+					<lable for="checkbox2"><input type="checkbox" class="checkbox" id="checkbox2">序号：02</lable><a href="javascript:" class="btn-cart"></a>
+				</div>
+				<a href="./detail.html">
+					<div class="order-content">
+						<p>专利号：201310626179.7</p>
+						<p>申请日：2009年11月02日</p>
+						<p>专利权人：德普伊产品公司</p>
+						<p><span>专利年度：第5年度</span><span class="price">年费金额：<b>1500</b>元</span></p>
+						<p><span>截止日期：2017年05月26日</span><span class="countdown">倒计时：82天</span></p>
+					</div>
+				</a>
+			</li>
+			<li data-price="1500">
+				<div class="order-title">
+					<lable for="checkbox2"><input type="checkbox" class="checkbox" id="checkbox2">序号：02</lable><a href="javascript:" class="btn-cart"></a>
+				</div>
+				<a href="./detail.html">
+					<div class="order-content">
+						<p>专利号：201310626179.7</p>
+						<p>申请日：2009年11月02日</p>
 						<p>专利权人：德普伊产品公司</p>
 						<p><span>专利年度：第5年度</span><span class="price">年费金额：<b>1500</b>元</span></p>
 						<p><span>截止日期：2017年05月26日</span><span class="countdown">倒计时：82天</span></p>
@@ -58,19 +100,7 @@
 			</li>
 		</ul>
 		
-		<div class="sum clearfix">
-			<div class="fl" style="width:20%">
-				<input type="checkbox" class="select-all" id="select-all"><label for="select-all">全选</label>
-			</div>
-			
-			<div class="fl" style="width:54%">
-				<p class="amount">待缴费专利件数：<b id="amount">0</b>件</p>
-				<p class="money">年费合计：￥<span id="money">0</span>元</p>
-			</div>
-			<div class="fr" style="width:26%">
-				<a class="settle-btn" id="settle-btn">批量缴费</a>
-			</div>
-		</div>
+		
 	</div>
 	
 	<div class="weui-tabbar">
