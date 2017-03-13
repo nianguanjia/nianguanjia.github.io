@@ -834,25 +834,56 @@ ul,ol,li{
 .order-btns a.btn-cancle{
 	background-color: #7ddc70;
 }
+.o-cate li a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    color: #787a7c;
+    background-color: #fff;
+    font-size: 0.75rem;
+    padding: 0 0.75rem;
+    border-bottom: 1px solid #e3e3e3;
+}
+.o-cate li a span{
+	float: right;
+}
+.o-cate li a i {
+    display: inline-block;
+    width: 1.15rem;
+    height: 1.15rem;
+    vertical-align: middle;
+    margin-right: 0.4rem;
+}
 
-
-ul.o-cate li:nth-child(2) a i{
+.o-cate li:nth-child(2) a i{
 	background: url(../images/icon-o-unpaid.png)center center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
-ul.o-cate li:nth-child(3) a i{
+.o-cate li:nth-child(3) a i{
 	background: url(../images/icon-o-paid.png)center center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
-ul.o-cate li:nth-child(4) a i{
+.o-cate li:nth-child(4) a i{
 	background: url(../images/icon-handling.png)center center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
-ul.o-cate li:nth-child(5) a i{
+.o-cate li:nth-child(5) a i{
 	background: url(../images/icon-o-finished.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.userpatent-box .o-cate .o-normal a i{
+	background: url(../images/订单.png)center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.userpatent-box .o-cate .o-special a i{
+	background: url(../images/特殊订单.png)center center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
@@ -887,32 +918,32 @@ ul.o-cate li:nth-child(5) a i{
 	vertical-align: middle;
 	margin-right: 0.4rem;
 }
-.p-category li:nth-child(1) a i{
+.p-category li:nth-child(1) i{
 	background: url(../images/icon-all.png)center center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
-.p-category li:nth-child(2) a i{
+.p-category li:nth-child(2) i{
 	background: url(../images/icon-unpaid.png)center center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
-.p-category li:nth-child(3) a i{
+.p-category li:nth-child(3) i{
 	background: url(../images/icon-paid.png)center center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
-.p-category li:nth-child(4) a i{
+.p-category li:nth-child(4) i{
 	background: url(../images/icon-overdue.png)center center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
-.p-category li:nth-child(5) a i{
+.p-category li:nth-child(5) i{
 	background: url(../images/icon-recovery.png)center center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
-.p-category li:nth-child(6) a i{
+.p-category li:nth-child(6) i{
 	background: url(../images/icon-ineffective.png)center center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
